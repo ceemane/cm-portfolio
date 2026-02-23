@@ -1,0 +1,38 @@
+{
+  "name": "cm-portfolio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "generate-token": "npx tsx scripts/generate-token.ts",
+    "list-tokens": "npx tsx scripts/list-tokens.ts",
+    "revoke-token": "npx tsx scripts/revoke-token.ts",
+    "upload-pdfs": "npx tsx scripts/upload-pdfs.ts"
+  },
+  "dependencies": {
+    "@react-pdf-viewer/core": "^3.12.0",
+    "@react-pdf-viewer/default-layout": "^3.12.0",
+    "@upstash/redis": "^1.36.2",
+    "@vercel/blob": "^2.3.0",
+    "motion": "^12.34.3",
+    "nanoid": "^5.1.6",
+    "next": "16.1.6",
+    "pdfjs-dist": "^3.11.174",
+    "react": "19.2.3",
+    "react-dom": "19.2.3"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.1.6",
+    "tailwindcss": "^4",
+    "tsx": "^4.21.0",
+    "typescript": "^5"
+  }
+}
