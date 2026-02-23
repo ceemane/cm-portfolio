@@ -8,6 +8,8 @@ const PUBLIC_PATHS = [
   "/favicon.ico",
   "/_next",
   "/api/auth",
+  "/admin",
+  "/api/admin",
 ];
 
 function isPublicPath(pathname: string): boolean {
