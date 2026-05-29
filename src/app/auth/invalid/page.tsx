@@ -19,7 +19,7 @@ export default function InvalidPage() {
           the correct URL.
         </p>
         <a
-          href="mailto:chester.manuel@pm.me"
+          href="mailto:chester.manuel@pm.me?subject=Access%20request%20for%20portfolio&body=Requesting%20access%20to%20Chester%20Manuel%20Portfolio."
           className="inline-block rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background transition-opacity hover:opacity-80"
         >
           Contact Chester
