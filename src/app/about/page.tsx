@@ -17,6 +17,10 @@ const skillGroups = [
     skills: [
       "Curriculum Design",
       "Learning Experience Design (LXD)",
+      "Scenario-Based Learning",
+      "Storyboarding",
+      "Backwards Design",
+      "Bloom's Taxonomy",
       "Adult Learning Theory",
       "Competency Frameworks",
       "Assessment Design",
@@ -27,27 +31,18 @@ const skillGroups = [
     ],
   },
   {
-    category: "AI & Engineering",
-    icon: Bot,
-    skills: [
-      "LLM API Integration (Claude, ChatGPT)",
-      "Prompt Engineering & Versioning",
-      "AI Agent Orchestration",
-      "RAG & Evaluation Strategies",
-      "Python",
-      "React / Node.js",
-      "Generative AI",
-    ],
-  },
-  {
     category: "Content & Media",
     icon: Film,
     skills: [
+      "Articulate Rise",
+      "Articulate Storyline",
+      "Articulate 360",
+      "Microvideo Scripting & Production",
+      "Animated Explainers",
       "Technical Writing",
       "E-Learning Development",
-      "Articulate Storyline & Rise",
       "Camtasia",
-      "Video Production",
+      "Video Script Writing",
       "SCORM Packaging",
     ],
   },
@@ -60,6 +55,23 @@ const skillGroups = [
       "Demo Enablement",
       "Customer Lifecycle Enablement",
       "Partner Enablement",
+      "Field-Ready Learning Assets",
+      "Knowledge Checks",
+      "Certification & Credentialing",
+    ],
+  },
+  {
+    category: "AI & Engineering",
+    icon: Bot,
+    skills: [
+      "LLM API Integration (Claude, ChatGPT)",
+      "Prompt Engineering & Versioning",
+      "AI Agent Orchestration",
+      "RAG & Evaluation Strategies",
+      "AI-Augmented Content Production",
+      "Python",
+      "React / Node.js",
+      "Generative AI",
     ],
   },
   {
@@ -96,22 +108,22 @@ const bios = [
   {
     label: "Background",
     content:
-      "I'm an instructional designer and learning engineer with 12+ years designing scalable technical education. My career has taken me from CSUMB's Instructional Science & Technology program to Stanford University, Stanford Health Care, ServiceNow, and Amazon Web Services, where I've developed training reaching 153K+ learners with 4.4/5 satisfaction. I apply ADDIE and SAM frameworks to match design rigor to project constraints, from rapid iterations in Agile/Scrum environments at ServiceNow and AWS to full-cycle curriculum builds at Stanford Health Care.",
+      "I'm a Senior Instructional Designer with 12+ years designing high-quality learning experiences for global B2B SaaS and enterprise audiences. My career has taken me from CSUMB's Instructional Science & Technology program to Stanford University, Stanford Health Care, ServiceNow, and Amazon Web Services, where I've developed training reaching 153K+ learners with 4.4/5 satisfaction and built 20+ Articulate Rise modules achieving 95% completion rates across AI/ML, analytics, security, and cloud domains. I apply ADDIE and SAM frameworks to match design rigor to project constraints, from rapid iterations in Agile/Scrum environments at ServiceNow and AWS to full-cycle curriculum builds at Stanford Health Care. MS in Instructional Science and Technology. AWS Certified AI Practitioner.",
   },
   {
     label: "At AWS",
     content:
-      "As Technical Content Manager at AWS, I lead learning program management for the AWS Jam platform serving 35K+ learners, provide instructional design direction to a cross-functional team of 40 content developers, and scale a distributed learning community of 400+ content creators. I also design AI competency blended learning programs and build AI-powered automation that has cut process cycle times by up to 98%.",
-  },
-  {
-    label: "AI & LLM Systems",
-    content:
-      "Beyond instructional design, I build production systems with LLMs as core infrastructure. I've architected an end-to-end AI-powered content pipeline using the Claude API that reduced training module creation from 1 to 2 weeks down to 1 hour, a 40 to 80x productivity gain, with automated quality gates, semantic prompt versioning, and a critic agent layer to prevent hallucinations before learner delivery.",
+      "As Technical Content Manager at AWS, I lead learning program management for the AWS Jam platform serving 45K+ learners, provide instructional design direction to a cross-functional team of 40 content developers, and scale a distributed learning community of 400+ content creators elevated to top-10% AWS performance metrics. I design AI competency blended learning programs, advise Professional Services teams on Jam-based learning program design, and build AI-powered automation that has cut process cycle times by up to 98%.",
   },
   {
     label: "Philosophy",
     content:
       "Great instructional design is invisible. When it works, learners feel capable, not taught. I combine evidence-based learning science with systems thinking to create experiences that are clear, engaging, and measurable. Every design decision should trace back to a learning objective, and every objective should trace forward to real-world performance.",
+  },
+  {
+    label: "AI & Automation",
+    content:
+      "I use AI tools to accelerate content production without sacrificing instructional rigor. I've architected an end-to-end AI-powered content pipeline using the Claude API that reduced training module creation from 1 to 2 weeks down to 1 hour, a 40 to 80x productivity gain, with automated quality gates, semantic prompt versioning, and a critic agent layer to prevent hallucinations before learner delivery.",
   },
 ];
 

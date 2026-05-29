@@ -79,6 +79,7 @@ export const projects: Project[] = [
     approach:
       "Built in Articulate Rise with decision-tree frameworks, scenario-based knowledge checks, and interactive visual aids. Created real AWS service examples to ground abstract concepts. Aligned all content to exam objectives.",
     impact: [
+      "95% completion rate across the ML Engineer Associate certification prep path",
       "Core Rise-built module in the ML Engineer Associate certification prep path",
       "Decision-tree framework adopted by learners as a practical job aid",
       "Scenario-based assessments reinforced application over memorization",
@@ -101,6 +102,7 @@ export const projects: Project[] = [
     approach:
       "Built in Articulate Rise with a scaffolded progression from basic training concepts to complex multi-model tuning scenarios. Used annotated SageMaker console walkthroughs and interactive knowledge checks to reduce cognitive load.",
     impact: [
+      "95% completion rate across the ML Engineer Associate certification prep path",
       "Rise-built module enabling learners to configure and run SageMaker training jobs independently",
       "Scaffolded eLearning design reduced drop-off in the certification prep pipeline",
       "Interactive knowledge checks reinforced learning at each stage",
@@ -123,6 +125,7 @@ export const projects: Project[] = [
     approach:
       "Built in Articulate Rise using a 'zoom in/zoom out' structure: start with the big picture data pipeline, then explore each stage with the relevant AWS service. Used consistent visual metaphors and interactive knowledge checks throughout.",
     impact: [
+      "95% completion rate across the AWS analytics learning path",
       "Rise-built foundational analytics course in the AWS training catalog",
       "Data pipeline mental model reused across advanced analytics courses",
       "Directly relevant for data engineering teams evaluating analytics tooling",
@@ -145,6 +148,7 @@ export const projects: Project[] = [
     approach:
       "Built in Articulate Rise with progressive complexity: individual service deep-dives composed into interactive reference architecture scenarios. Interactive exercises require learners to make real architectural decisions.",
     impact: [
+      "95% completion rate across the AWS analytics learning path",
       "Rise-built course completing the analytics fundamentals learning path",
       "Reference architecture patterns adopted by AWS Solutions Architects for customer workshops",
       "Interactive architecture exercises validated real-world design skills",
