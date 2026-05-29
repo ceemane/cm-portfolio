@@ -25,6 +25,7 @@ export default function AdminPage() {
   const [days, setDays] = useState(14);
   const [generatedLink, setGeneratedLink] = useState("");
   const [copied, setCopied] = useState(false);
+  const [copiedId, setCopiedId] = useState<string | null>(null);
 
   const fetchTokens = useCallback(async () => {
     setLoading(true);
@@ -104,6 +105,13 @@ export default function AdminPage() {
     await navigator.clipboard.writeText(generatedLink);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
+  };
+
+  const copyTokenLink = async (id: string) => {
+    const link = `${window.location.origin}/auth/verify?token=${id}`;
+    await navigator.clipboard.writeText(link);
+    setCopiedId(id);
+    setTimeout(() => setCopiedId(null), 2000);
   };
 
   useEffect(() => {
@@ -270,12 +278,20 @@ export default function AdminPage() {
                     <span className="font-mono">{t.id.slice(0, 8)}...</span>
                   </p>
                 </div>
-                <button
-                  onClick={() => handleRevoke(t.id)}
-                  className="ml-4 flex-shrink-0 rounded-lg px-3 py-1.5 text-xs text-red-500 transition-colors hover:bg-red-50"
-                >
-                  Revoke
-                </button>
+                <div className="ml-4 flex flex-shrink-0 items-center gap-2">
+                  <button
+                    onClick={() => copyTokenLink(t.id)}
+                    className="rounded-lg px-3 py-1.5 text-xs text-[#b8860b] transition-colors hover:bg-[#b8860b]/10"
+                  >
+                    {copiedId === t.id ? "Copied!" : "Copy Link"}
+                  </button>
+                  <button
+                    onClick={() => handleRevoke(t.id)}
+                    className="rounded-lg px-3 py-1.5 text-xs text-red-500 transition-colors hover:bg-red-50"
+                  >
+                    Revoke
+                  </button>
+                </div>
               </div>
             ))}
           </div>
