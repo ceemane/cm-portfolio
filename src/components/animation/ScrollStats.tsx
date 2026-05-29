@@ -29,7 +29,6 @@ export function ScrollStats() {
           gsap.to(sectionRef.current, { opacity: 1, y: 0, duration: 0.8, ease: "power2.out" });
 
           stats.forEach((stat, i) => {
-            if (stat.prefix) return;
             const el = numbersRef.current[i];
             if (!el) return;
             const obj = { val: 0 };
@@ -63,10 +62,7 @@ export function ScrollStats() {
               <div key={stat.label} className="flex flex-col items-center text-center gap-2">
                 <Icon className="w-5 h-5 text-accent/60" strokeWidth={1.5} />
                 <p className="text-3xl font-semibold tracking-tight text-accent sm:text-4xl">
-                  {stat.prefix && <span>{stat.prefix}</span>}
-                  <span ref={(el) => { numbersRef.current[i] = el; }}>
-                    {stat.prefix ? stat.value : 0}
-                  </span>
+                  <span ref={(el) => { numbersRef.current[i] = el; }}>0</span>
                   {stat.suffix}
                 </p>
                 <p className="text-xs uppercase tracking-widest text-muted">
