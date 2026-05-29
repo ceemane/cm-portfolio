@@ -6,12 +6,12 @@ interface BadgeProps {
 export function Badge({ children, variant = "default" }: BadgeProps) {
   const styles =
     variant === "accent"
-      ? "bg-accent/10 text-accent"
-      : "bg-foreground/5 text-muted";
+      ? "border border-accent/20 bg-accent/10 text-accent"
+      : "border border-border bg-surface-raised text-muted";
 
   return (
     <span
-      className={`inline-block rounded-full px-3 py-1 text-xs font-medium ${styles}`}
+      className={`inline-block rounded-full px-3 py-1 text-xs font-medium tracking-wide ${styles}`}
     >
       {children}
     </span>

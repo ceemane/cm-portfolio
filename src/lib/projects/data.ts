@@ -11,6 +11,7 @@ export interface Project {
   impact: string[];
   pdfFile?: string; // filename in content/pdfs or Vercel Blob key
   externalUrl?: string; // link to live artifact (e.g. AWS Skill Builder)
+  videoUrl?: string; // direct video URL (Vercel Blob)
   images?: { src: string; alt: string }[]; // screenshots in public/images/
 }
 
@@ -40,24 +41,25 @@ export const projects: Project[] = [
   {
     slug: "aws-jam-user-guide",
     title: "AWS Jam Platform",
-    subtitle: "Content management and documentation for AWS's gamified learning platform",
+    subtitle: "Game-based group learning platform serving AWS customers, partners, and internal teams across cloud domains",
     type: "Training",
     description:
-      "Lead content management for AWS Jam, a gamified hands-on learning platform serving 35K+ learners. Oversaw challenge development, content quality, documentation, and AI-powered automation across security, AI/ML, and DevOps domains.",
+      "Lead content management for AWS Jam, a gamified scenario-based group learning platform used by AWS customers, partners, and internal teams to upskill across AI/ML, Security, DevOps, Cloud Infrastructure, Storage, Compute, and Database domains. Advise and design Jam-based learning programs for Professional Services and customer organizations.",
     context:
-      "AWS Jam is a gamified, hands-on learning platform where customers and partners solve real AWS challenges in live sandbox environments. The platform hosts 230+ challenges and features at marquee events like AWS re:Invent (60K+ attendees).",
-    role: "Technical Content Manager: lead learning program management, provide instructional design direction to a cross-functional team of 40 content developers, and scale a distributed learning community of 400+ content creators through a Center of Excellence program.",
+      "AWS Jam is a hands-on, game-based group learning platform where teams solve real AWS challenges in live sandbox environments. It serves a broad audience including AWS customers training their internal engineering teams, AWS partners and resellers, AWS internal staff such as SAs, TAMs, and BDMs, and attendees at marquee events like AWS re:Invent. Jam is delivered as facilitated group events, embedded within broader learning programs, and at AWS events globally. The platform hosts 270+ challenges spanning AI/ML, Security, DevOps, Cloud Infrastructure, Storage, Compute, and Database, with industry-specific tracks for Financial Services, Healthcare and Life Sciences, and Automotive and Manufacturing.",
+    role: "Technical Content Manager: lead learning program management and provide instructional design direction to a cross-functional team of 40 content developers. Advise Professional Services teams and customers on which Jam challenges best fit their skill gaps and use cases, and design full Jam-based learning program structures for their teams. Scale a distributed creator community of 400+ content developers through a Center of Excellence program.",
     challenge:
-      "Scale content quality and velocity across 230+ challenges and a growing creator community while maintaining top-10% AWS performance metrics and 4.38/5 learner satisfaction.",
+      "Scale content quality and velocity across 270+ scenario-based, interactive challenges while advising and designing Jam learning programs for diverse customer organizations, partner teams, and internal AWS audiences across multiple cloud domains and industry verticals.",
     approach:
-      "Built a Center of Excellence program to elevate 400+ content creators from baseline to top-10% quality. Architected AI-powered automation (Jam Challenge Manager reducing process time by 98%, Content Proposal Automation cutting approval from 2 months to 1 day). Led development of 50 new challenges for re:Invent 2025 collaborating with 40 SMEs across Generative AI, Security, and DevOps.",
+      "Built a Center of Excellence program to elevate 400+ content creators to top-10% quality standards. Each challenge features game-based elements, scenario-driven tasks, and hands-on sandbox environments. Consult with Professional Services and customers to map skill gaps to the right challenge content and design structured Jam programs. Architected AI-powered automation reducing challenge management process time by 98% and content approval from 2 months to 1 day. Led development of 50 new challenges for re:Invent 2025 with 40 SMEs across Generative AI, Security, and DevOps.",
     impact: [
-      "35K+ learners served with 4.38/5 satisfaction, top-10% AWS performance metrics",
-      "400+ content creators elevated through Center of Excellence program",
-      "50 new challenges developed for AWS re:Invent 2025 (60K+ attendees)",
+      "45K+ learners served across AWS customers, partners, and internal teams with 4.38/5 satisfaction",
+      "Advised and designed Jam-based learning programs for Professional Services customers across FSI, Healthcare, and Automotive verticals",
+      "270+ challenges spanning AI/ML, Security, DevOps, Cloud Infrastructure, Storage, Compute, and Database domains",
+      "400+ content creators elevated through Center of Excellence program to top-10% AWS performance metrics",
+      "50 new scenario-based challenges developed for AWS re:Invent 2025 (60K+ attendees)",
       "98% process efficiency gain through AI-powered Jam Challenge Manager automation",
       "Content Proposal Automation reduced approval cycle from 2 months to 1 day",
-      "Managed security program for 230+ challenges preventing fraud and abuse",
     ],
     pdfFile: "aws-jam-user-guide.pdf",
     externalUrl: "https://jam.aws.com/",
@@ -65,20 +67,21 @@ export const projects: Project[] = [
   {
     slug: "ml-engineer-modeling-approach",
     title: "ML Engineer Associate: Choose a Modeling Approach",
-    subtitle: "AWS Certification prep course module (2.1)",
+    subtitle: "Articulate Rise eLearning module, AWS Certification prep (2.1)",
     type: "Course",
     description:
-      "Course module preparing learners to select appropriate ML modeling approaches, covering supervised/unsupervised learning, model selection criteria, and AWS SageMaker integration.",
+      "Interactive Articulate Rise eLearning module preparing learners to select appropriate ML modeling approaches, covering supervised/unsupervised learning, model selection criteria, and AWS SageMaker integration.",
     context:
       "Part of the AWS Machine Learning Engineer Associate certification preparation curriculum. Learners needed structured guidance on model selection: a notoriously abstract topic.",
-    role: "Instructional Designer: designed learning objectives, content structure, assessments, and visual aids.",
+    role: "Instructional Designer: designed learning objectives, content structure, scenario-based assessments, and visual aids. Built the full course in Articulate Rise.",
     challenge:
-      "Make abstract ML model selection concepts concrete and actionable for engineers preparing for certification, many of whom had limited ML background.",
+      "Make abstract ML model selection concepts concrete and actionable in an interactive eLearning format for engineers with limited ML background.",
     approach:
-      "Developed decision-tree frameworks for model selection. Created scenario-based examples using real AWS services. Aligned all content to exam objectives while building genuine understanding.",
+      "Built in Articulate Rise with decision-tree frameworks, scenario-based knowledge checks, and interactive visual aids. Created real AWS service examples to ground abstract concepts. Aligned all content to exam objectives.",
     impact: [
-      "Core module in the ML Engineer Associate certification prep path",
+      "Core Rise-built module in the ML Engineer Associate certification prep path",
       "Decision-tree framework adopted by learners as a practical job aid",
+      "Scenario-based assessments reinforced application over memorization",
       "Bridged the gap between theoretical ML concepts and AWS service implementation",
     ],
     pdfFile: "aws-ml-engineer-associate-2-1-choose-a-modeling-approach.pdf",
@@ -86,20 +89,21 @@ export const projects: Project[] = [
   {
     slug: "ml-engineer-train-models",
     title: "ML Engineer Associate: Train Models",
-    subtitle: "AWS Certification prep course module (2.2)",
+    subtitle: "Articulate Rise eLearning module, AWS Certification prep (2.2)",
     type: "Course",
     description:
-      "Course module on model training workflows including data preparation, hyperparameter tuning, SageMaker training jobs, and evaluation metrics.",
+      "Interactive Articulate Rise eLearning module on model training workflows including data preparation, hyperparameter tuning, SageMaker training jobs, and evaluation metrics.",
     context:
       "Sequential follow-up to the modeling approach module. Learners needed hands-on training guidance aligned with both certification objectives and real-world AWS workflows.",
-    role: "Instructional Designer: designed end-to-end learning experience including labs, knowledge checks, and visual process flows.",
+    role: "Instructional Designer: designed end-to-end learning experience including interactive Rise modules, labs, knowledge checks, and visual process flows.",
     challenge:
-      "Balance certification exam coverage with practical training skills. Many learners had never run a training job in SageMaker.",
+      "Balance certification exam coverage with practical training skills in an engaging eLearning format. Many learners had never run a training job in SageMaker.",
     approach:
-      "Built a scaffolded learning path from basic training concepts to complex multi-model tuning scenarios. Used annotated SageMaker console walkthroughs and code examples to reduce cognitive load.",
+      "Built in Articulate Rise with a scaffolded progression from basic training concepts to complex multi-model tuning scenarios. Used annotated SageMaker console walkthroughs and interactive knowledge checks to reduce cognitive load.",
     impact: [
-      "Enabled learners to configure and run SageMaker training jobs independently",
-      "Scaffolded approach reduced drop-off in the certification prep pipeline",
+      "Rise-built module enabling learners to configure and run SageMaker training jobs independently",
+      "Scaffolded eLearning design reduced drop-off in the certification prep pipeline",
+      "Interactive knowledge checks reinforced learning at each stage",
       "Integrated with hands-on labs for experiential learning reinforcement",
     ],
     pdfFile: "aws-ml-engineer-associate-2-2-train-models.pdf",
@@ -107,20 +111,21 @@ export const projects: Project[] = [
   {
     slug: "analytics-fundamentals-part-1",
     title: "Fundamentals of Analytics on AWS: Part 1",
-    subtitle: "Foundation course on AWS analytics services",
+    subtitle: "Articulate Rise eLearning — foundation course on AWS analytics services",
     type: "Course",
     description:
-      "Introductory course covering the AWS analytics ecosystem, data lake architecture, and foundational services including S3, Glue, and Athena.",
+      "Interactive Articulate Rise eLearning course covering the AWS analytics ecosystem, data lake architecture, and foundational services including S3, Glue, and Athena. Built for data practitioners and analytics engineers.",
     context:
-      "AWS analytics services were growing rapidly, but customers lacked a foundational course that connected the services into a coherent learning journey.",
-    role: "Instructional Designer: designed curriculum architecture, wrote content, and created assessment strategy.",
+      "AWS analytics services were growing rapidly, but customers lacked a foundational course that connected the services into a coherent learning journey for data practitioners and analytics engineers.",
+    role: "Instructional Designer: designed curriculum architecture, built the full course in Articulate Rise, wrote content, and created assessment strategy.",
     challenge:
-      "Create a foundation-level course that gives learners a mental model of the entire AWS analytics ecosystem without overwhelming them with service-specific details.",
+      "Create a foundation-level Rise course that gives data practitioners a mental model of the entire AWS analytics ecosystem without overwhelming them with service-specific details.",
     approach:
-      "Designed a 'zoom in/zoom out' structure: start with the big picture data pipeline, then explore each stage with the relevant AWS service. Used consistent visual metaphors throughout.",
+      "Built in Articulate Rise using a 'zoom in/zoom out' structure: start with the big picture data pipeline, then explore each stage with the relevant AWS service. Used consistent visual metaphors and interactive knowledge checks throughout.",
     impact: [
-      "Foundational analytics course in the AWS training catalog",
+      "Rise-built foundational analytics course in the AWS training catalog",
       "Data pipeline mental model reused across advanced analytics courses",
+      "Directly relevant for data engineering teams evaluating analytics tooling",
       "Served as prerequisite for specialized analytics certifications",
     ],
     pdfFile: "fundamentals-of-analytics-on-aws-part-1.pdf",
@@ -128,23 +133,45 @@ export const projects: Project[] = [
   {
     slug: "analytics-fundamentals-part-2",
     title: "Fundamentals of Analytics on AWS: Part 2",
-    subtitle: "Advanced analytics services and architectures",
+    subtitle: "Articulate Rise eLearning — advanced analytics services and architectures",
     type: "Course",
     description:
-      "Continuation course covering advanced analytics services including Redshift, EMR, Kinesis, and QuickSight, plus end-to-end architecture patterns.",
+      "Continuation Articulate Rise eLearning course covering advanced analytics services including Redshift, EMR, Kinesis, and QuickSight, plus end-to-end architecture patterns for data engineering teams.",
     context:
-      "Building on Part 1, this course needed to bridge foundational knowledge to real-world analytics architectures used in production environments.",
-    role: "Instructional Designer: designed advanced content progression and architecture case studies.",
+      "Building on Part 1, this course bridges foundational knowledge to real-world analytics architectures used in production environments. Directly relevant for data engineering and analytics engineering teams.",
+    role: "Instructional Designer: designed advanced content progression, built the course in Articulate Rise, and created architecture case studies with interactive assessments.",
     challenge:
-      "Elevate learners from foundational understanding to architectural thinking: helping them see how individual services compose into production analytics pipelines.",
+      "Elevate learners from foundational understanding to architectural thinking in an engaging Rise format, helping them see how individual services compose into production analytics pipelines.",
     approach:
-      "Used progressive complexity: started with individual service deep-dives, then composed them into reference architectures.",
+      "Built in Articulate Rise with progressive complexity: individual service deep-dives composed into interactive reference architecture scenarios. Interactive exercises require learners to make real architectural decisions.",
     impact: [
-      "Completed the analytics fundamentals learning path",
+      "Rise-built course completing the analytics fundamentals learning path",
       "Reference architecture patterns adopted by AWS Solutions Architects for customer workshops",
-      "Reference architecture exercises validated real-world design skills",
+      "Interactive architecture exercises validated real-world design skills",
+      "Directly applicable for data engineering teams evaluating modern analytics stacks",
     ],
     pdfFile: "fundamentals-of-analytics-on-aws-part-2.pdf",
+  },
+  {
+    slug: "intro-video-sample",
+    title: "Instructional Video: Script & Production Sample",
+    subtitle: "End-to-end video scripting and production for eLearning",
+    type: "Course",
+    description:
+      "A complete instructional video sample demonstrating end-to-end production skills from script writing through final video delivery, optimized for on-demand eLearning consumption.",
+    context:
+      "Scenario-based microvideos are a core component of modern eLearning programs, driving engagement and behavior change through narrative immersion. This sample demonstrates the full production workflow: scripting, storyboarding, creative direction, and delivering a focused scenario-based video for on-demand consumption.",
+    role: "Instructional Designer & Creative Director: wrote the full script, storyboarded visuals, and directed the creative services team through production to final delivery. Maintained instructional integrity and creative quality at every stage.",
+    challenge:
+      "Deliver a focused, engaging scenario within a short video format while maintaining production quality appropriate for enterprise group-based learning programs.",
+    approach:
+      "Scripted for clarity and concision so every sentence drives the learner deeper into the scenario. Storyboarded the visual sequence before handing off to creative services, then provided direction through production to ensure pacing, tone, and learning objectives aligned in the final cut.",
+    impact: [
+      "Demonstrates end-to-end video production capability from script to final delivery",
+      "Optimized for on-demand consumption in modern LMS platforms",
+      "Shows scripting discipline: focused message, clear structure, no filler",
+    ],
+    videoUrl: "https://fxj0ysdpgxsoketu.public.blob.vercel-storage.com/videos/INTRO_v1.mp4",
   },
   {
     slug: "servicenow-csm-certification",
