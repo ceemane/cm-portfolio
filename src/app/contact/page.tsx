@@ -3,6 +3,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Container } from "@/components/ui/Container";
 import { FadeInView } from "@/components/animation/FadeInView";
+import { BookingButton } from "@/components/ui/BookingButton";
 import { Mail, MapPin } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -40,17 +41,25 @@ export default function ContactPage() {
                   Get in Touch
                 </h1>
                 <p className="mt-6 text-base leading-relaxed text-muted">
-                  I&apos;m always interested in discussing instructional design,
-                  learning engineering, and how I can bring my approach to new
-                  challenges. The best way to reach me is by email.
+                  I&apos;m available for consulting on instructional design,
+                  learning engineering, and AI-powered content operations. Book
+                  a time directly or send me an email.
                 </p>
-                <a
-                  href="mailto:chester.manuel@pm.me"
-                  className="mt-8 inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 px-8 py-3 text-xs font-semibold uppercase tracking-widest text-accent transition-all hover:bg-accent hover:text-background hover:border-accent"
-                >
-                  <Mail className="w-3.5 h-3.5" strokeWidth={2} />
-                  chester.manuel@pm.me
-                </a>
+                <div className="mt-8 flex flex-col items-center gap-4">
+                  <BookingButton />
+                  <div className="flex items-center gap-4">
+                    <span className="h-px w-12 bg-border" />
+                    <span className="text-xs uppercase tracking-widest text-muted">or</span>
+                    <span className="h-px w-12 bg-border" />
+                  </div>
+                  <a
+                    href="mailto:chester.manuel@pm.me"
+                    className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 px-8 py-3 text-xs font-semibold uppercase tracking-widest text-accent transition-all hover:bg-accent hover:text-background hover:border-accent"
+                  >
+                    <Mail className="w-3.5 h-3.5" strokeWidth={2} />
+                    chester.manuel@pm.me
+                  </a>
+                </div>
                 <p className="mt-12 flex items-center justify-center gap-1.5 text-xs font-medium uppercase tracking-widest text-muted-subtle">
                   <MapPin className="w-3.5 h-3.5" strokeWidth={1.5} />
                   San Francisco, California

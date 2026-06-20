@@ -5,6 +5,7 @@ import { FadeInView } from "@/components/animation/FadeInView";
 import { ScrollHero } from "@/components/animation/ScrollHero";
 import { ScrollStats } from "@/components/animation/ScrollStats";
 import { ScrollPortfolio } from "@/components/animation/ScrollPortfolio";
+import { BookingButton } from "@/components/ui/BookingButton";
 import Link from "next/link";
 
 export default function HomePage() {
@@ -86,12 +87,15 @@ export default function HomePage() {
                 <p className="mb-10 text-base text-muted">
                   Interested in discussing how I can bring this approach to your team?
                 </p>
-                <a
-                  href="mailto:chester.manuel@pm.me"
-                  className="inline-block rounded-full border border-accent/40 bg-accent/10 px-10 py-4 text-xs font-semibold uppercase tracking-[0.2em] text-accent transition-all hover:bg-accent hover:text-background hover:border-accent"
-                >
-                  chester.manuel@pm.me
-                </a>
+                <div className="flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
+                  <BookingButton />
+                  <a
+                    href="mailto:chester.manuel@pm.me"
+                    className="inline-flex items-center rounded-full border border-accent/30 px-10 py-4 text-xs font-semibold uppercase tracking-[0.2em] text-accent transition-all hover:border-accent/60"
+                  >
+                    chester.manuel@pm.me
+                  </a>
+                </div>
               </div>
             </FadeInView>
           </Container>
