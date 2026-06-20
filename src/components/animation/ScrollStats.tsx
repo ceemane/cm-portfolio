@@ -10,7 +10,7 @@ gsap.registerPlugin(ScrollTrigger);
 const stats = [
   { value: 153, suffix: "K+", label: "Learners Reached", icon: Users },
   { value: 4.4, suffix: "/5", label: "Satisfaction Score", decimals: 1, icon: Star },
-  { value: 95, suffix: "%", label: "Rise Completion Rate", icon: Zap },
+  { value: 99, suffix: "%", label: "Ops Reduction via AI", icon: Zap },
   { value: 12, suffix: "+", label: "Years Experience", icon: Clock },
 ];
 

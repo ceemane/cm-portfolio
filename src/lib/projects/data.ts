@@ -31,8 +31,8 @@ export const projects: Project[] = [
     approach:
       "Mapped all exam domains to learning objectives, then sequenced 13 courses in a scaffolded progression. Integrated hands-on labs at key milestones so learners apply concepts immediately. Built knowledge checks throughout to reinforce retention and surface gaps before the exam.",
     impact: [
-      "Published on AWS Skill Builder as the official ML Engineer Associate certification prep path",
-      "Spans 13 courses covering the full certification exam blueprint",
+      "153,000+ registrations with 4.4/5 learner satisfaction — the official ML Engineer Associate certification prep path on AWS Skill Builder",
+      "Spans 13 courses covering the full certification exam blueprint across data engineering, model development, deployment, and monitoring",
       "Integrated hands-on labs provide practical experience with SageMaker, Bedrock, and other ML services",
       "Scaffolded design reduces learner drop-off across multi-week study plans",
     ],
@@ -46,7 +46,7 @@ export const projects: Project[] = [
     description:
       "Lead content management for AWS Jam, a gamified scenario-based group learning platform used by AWS customers, partners, and internal teams to upskill across AI/ML, Security, DevOps, Cloud Infrastructure, Storage, Compute, and Database domains. Advise and design Jam-based learning programs for Professional Services and customer organizations.",
     context:
-      "AWS Jam is a hands-on, game-based group learning platform where teams solve real AWS challenges in live sandbox environments. It serves a broad audience including AWS customers training their internal engineering teams, AWS partners and resellers, AWS internal staff such as SAs, TAMs, and BDMs, and attendees at marquee events like AWS re:Invent. Jam is delivered as facilitated group events, embedded within broader learning programs, and at AWS events globally. The platform hosts 270+ challenges spanning AI/ML, Security, DevOps, Cloud Infrastructure, Storage, Compute, and Database, with industry-specific tracks for Financial Services, Healthcare and Life Sciences, and Automotive and Manufacturing.",
+      "AWS Jam is a hands-on, game-based group learning platform where teams solve real AWS challenges in live sandbox environments. It serves a broad audience including AWS customers training their internal engineering teams, AWS partners and resellers, AWS internal staff such as SAs, TAMs, and BDMs, and attendees at marquee events like AWS re:Invent. Jam is delivered as facilitated group events, embedded within broader learning programs, and at AWS events globally. The platform hosts 300+ active products spanning AI/ML, Security, DevOps, Cloud Infrastructure, Storage, Compute, and Database, with industry-specific tracks for Financial Services, Healthcare and Life Sciences, and Automotive and Manufacturing.",
     role: "Technical Content Manager: lead learning program management and provide instructional design direction to a cross-functional team of 40 content developers. Advise Professional Services teams and customers on which Jam challenges best fit their skill gaps and use cases, and design full Jam-based learning program structures for their teams. Scale a distributed creator community of 400+ content developers through a Center of Excellence program.",
     challenge:
       "Scale content quality and velocity across 300+ active products while advising and designing Jam learning programs for diverse customer organizations, partner teams, and internal AWS audiences across multiple cloud domains and industry verticals.",
@@ -59,7 +59,8 @@ export const projects: Project[] = [
       "400+ content creators elevated through Center of Excellence program to top-10% AWS performance metrics",
       "110+ challenges developed for AWS re:Invent 2025 (60K+ senior leaders and engineers)",
       "99% reduction in manual operational work via 13-agent AI fleet (17.6 hrs/week to 10 min/week, 86+ automated runs/day)",
-      "Content Proposal Automation reduced approval cycle from 2 months to 1 day; 100% content defect auto-detection across portfolio",
+      "Content Proposal Automation reduced approval cycle from 2 months to 1 day",
+      "AI-powered monitoring: 100% defect auto-detection, 95% content health score, 98% on-time maintenance, 95% SLA breach reduction across 50 distributed maintainers",
     ],
     pdfFile: "aws-jam-user-guide.pdf",
     externalUrl: "https://jam.aws.com/",
@@ -238,6 +239,7 @@ export const projects: Project[] = [
       "Won 2022 CEdMA Innovation Award for blended learning program design",
       "Achieved 4.65/5 customer satisfaction through learner-centered design",
       "Delivered 36 modules in 4 months with a cross-functional team of 8-12",
+      "Re-platformed 3-day ILT to 12-hour self-paced training, reducing learner time commitment by 50%",
       "Psychometrics-based certification exams adopted as the standard for CSM and FSM credentials",
       "Train-the-trainer programs scaled delivery capabilities across alliance partners globally",
     ],

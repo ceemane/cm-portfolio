@@ -123,7 +123,7 @@ const bios = [
   {
     label: "At AWS",
     content:
-      "As Technical Content Manager at AWS, I own strategy and roadmap for the AWS Jam LXP serving 50K+ customer developers, provide instructional design direction to a cross-functional team of 40 content developers, and scale a distributed learning community of 400+ content creators elevated to top-10% AWS performance metrics. I design AI competency blended learning programs, advise Professional Services teams on Jam-based learning program design, and deployed a fleet of 13 autonomous AI agents that reduced manual operational work by 99%—from 17.6 hrs/week to 10 min/week—while achieving 100% content defect auto-detection across 300+ active products.",
+      "As Technical Content Manager at AWS, I own strategy and roadmap for the AWS Jam LXP—scaling the platform from 30K+ to 50K+ customer developers (30% YoY growth)—while directing a cross-functional team of 40 content developers and scaling a distributed creator community of 400+ elevated to top-10% AWS performance metrics. I deployed a fleet of 13 autonomous AI agents reducing manual operational work by 99% (17.6 hrs/week to 10 min/week, 86+ automated runs/day) and built an AI-powered monitoring system across 300+ active products achieving 100% defect auto-detection, 95% content health score, 98% on-time maintenance, and 95% SLA breach reduction across 50 distributed maintainers.",
   },
   {
     label: "Philosophy",
@@ -133,7 +133,7 @@ const bios = [
   {
     label: "AI & Automation",
     content:
-      "I use AI tools to accelerate content production without sacrificing instructional rigor. I've architected an end-to-end AI-powered content pipeline using the Claude API that reduced training module creation from 1 to 2 weeks down to 1 hour, a 40 to 80x productivity gain, with automated quality gates, semantic prompt versioning, and a critic agent layer to prevent hallucinations before learner delivery.",
+      "I build AI systems in production. At AWS, a 13-agent autonomous fleet cut challenge management from 17.6 hrs/week to 10 min/week, and a Kiro-powered Jam Challenge Builder reduced challenge delivery from 40–80 hours to 4 hours. I've also built a multi-agent content orchestration engine that reduced manual content generation effort by 90%, and a full-stack content operations platform on Claude Sonnet 4.5 with four-role workflows, structural quality gates, and automatic semantic versioning. Every system is designed with human-in-the-loop review and production-grade reliability from day one.",
   },
 ];
 
