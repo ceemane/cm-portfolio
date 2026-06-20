@@ -123,7 +123,7 @@ const bios = [
   {
     label: "At AWS",
     content:
-      "As Technical Content Manager at AWS, I own strategy and roadmap for the AWS Jam LXP—scaling the platform from 30K+ to 50K+ customer developers (30% YoY growth)—while directing a cross-functional team of 40 content developers and scaling a distributed creator community of 400+ elevated to top-10% AWS performance metrics. I deployed a fleet of 13 autonomous AI agents reducing manual operational work by 99% (17.6 hrs/week to 10 min/week, 86+ automated runs/day) and built an AI-powered monitoring system across 300+ active products achieving 100% defect auto-detection, 95% content health score, 98% on-time maintenance, and 95% SLA breach reduction across 50 distributed maintainers.",
+      "As Technical Content Manager at AWS, I own strategy and roadmap for the AWS Jam LXP—scaling the platform from 30K+ to 50K+ customer developers (30% YoY growth)—while directing 40 content developers and a creator community of 400+ elevated to top-10% AWS performance. I lead multi-modal training design combining ILT, self-paced learning, and group-based gamified Jam experiences; developed 110 individual challenge labs; and secured 300+ labs against exploitation through a custom threat model and MCP-connected security ticket automation, maintaining zero security incidents since 2024. I also deployed a 13-agent AI fleet cutting manual ops by 99% (17.6 hrs/week to 10 min/week, 86+ automated runs/day) and an AI monitoring system across 300+ active products achieving 100% defect auto-detection, 95% content health score, 98% on-time maintenance, and 95% SLA breach reduction across 50 distributed maintainers.",
   },
   {
     label: "Philosophy",
