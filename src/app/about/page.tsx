@@ -4,6 +4,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Container } from "@/components/ui/Container";
 import { FadeInView } from "@/components/animation/FadeInView";
 import { BookOpen, Bot, Film, Megaphone, BarChart2, Wrench, ExternalLink } from "lucide-react";
+import { AboutIllustration } from "@/components/animation/AboutIllustration";
 
 export const metadata: Metadata = {
   title: "About | Chester Manuel",
@@ -64,14 +65,22 @@ const skillGroups = [
     category: "AI & Engineering",
     icon: Bot,
     skills: [
-      "LLM API Integration (Claude, ChatGPT)",
-      "Prompt Engineering & Versioning",
       "AI Agent Orchestration",
-      "RAG & Evaluation Strategies",
+      "Autonomous Agent Deployment",
+      "Agentic Workflow Design",
+      "Multi-Agent Frameworks",
+      "MCP Integration",
+      "LLM Workflow Automation",
+      "RAG Pipelines",
+      "Prompt Engineering & Versioning",
       "AI-Augmented Content Production",
       "Python",
       "React / Node.js",
-      "Generative AI",
+      "Claude Code",
+      "Kiro",
+      "Git / CLI",
+      "JSON Schema",
+      "Slack API Integration",
     ],
   },
   {
@@ -92,14 +101,15 @@ const skillGroups = [
     category: "Platforms & Tools",
     icon: Wrench,
     skills: [
-      "AWS Cloud Services",
       "AWS Skill Builder",
       "AWS Jam",
       "Docebo (LMS)",
       "Jira",
+      "Taskei",
       "QuickSight",
-      "n8n Workflow Automation",
-      "Strapi CMS",
+      "Confluence",
+      "SharePoint",
+      "Highspot",
     ],
   },
 ];
@@ -108,12 +118,12 @@ const bios = [
   {
     label: "Background",
     content:
-      "I'm a Senior Instructional Designer with 12+ years designing high-quality learning experiences for global B2B SaaS and enterprise audiences. My career has taken me from CSUMB's Instructional Science & Technology program to Stanford University, Stanford Health Care, ServiceNow, and Amazon Web Services, where I've developed training reaching 153K+ learners with 4.4/5 satisfaction and built 20+ Articulate Rise modules achieving 95% completion rates across AI/ML, analytics, security, and cloud domains. I apply ADDIE and SAM frameworks to match design rigor to project constraints, from rapid iterations in Agile/Scrum environments at ServiceNow and AWS to full-cycle curriculum builds at Stanford Health Care. MS in Instructional Science and Technology. AWS Certified AI Practitioner.",
+      "I'm a Learning Leader and AI Systems Builder with 12+ years designing scalable L&D infrastructure, certification programs, field enablement systems, and AI-powered content operations at global technology companies. My career has taken me from CSUMB's Instructional Science & Technology program to Stanford University, Stanford Health Care, ServiceNow, and Amazon Web Services, where I've developed training reaching 153K+ learners with 4.4/5 satisfaction and built 20+ Articulate Rise modules achieving 95% completion rates across AI/ML, analytics, security, and cloud domains. I apply ADDIE and SAM frameworks to match design rigor to project constraints, from rapid iterations in Agile/Scrum environments at ServiceNow and AWS to full-cycle curriculum builds at Stanford Health Care. MS in Instructional Science and Technology. AWS Certified AI Practitioner (valid through 2027).",
   },
   {
     label: "At AWS",
     content:
-      "As Technical Content Manager at AWS, I lead learning program management for the AWS Jam platform serving 45K+ learners, provide instructional design direction to a cross-functional team of 40 content developers, and scale a distributed learning community of 400+ content creators elevated to top-10% AWS performance metrics. I design AI competency blended learning programs, advise Professional Services teams on Jam-based learning program design, and build AI-powered automation that has cut process cycle times by up to 98%.",
+      "As Technical Content Manager at AWS, I own strategy and roadmap for the AWS Jam LXP serving 50K+ customer developers, provide instructional design direction to a cross-functional team of 40 content developers, and scale a distributed learning community of 400+ content creators elevated to top-10% AWS performance metrics. I design AI competency blended learning programs, advise Professional Services teams on Jam-based learning program design, and deployed a fleet of 13 autonomous AI agents that reduced manual operational work by 99%—from 17.6 hrs/week to 10 min/week—while achieving 100% content defect auto-detection across 300+ active products.",
   },
   {
     label: "Philosophy",
@@ -175,6 +185,21 @@ export default function AboutPage() {
                 </FadeInView>
               ))}
             </div>
+          </Container>
+        </section>
+
+        {/* Illustration */}
+        <section className="border-t border-border/60 py-12">
+          <Container>
+            <FadeInView>
+              <p className="mb-2 text-xs font-medium uppercase tracking-[0.25em] text-accent">
+                Practice
+              </p>
+              <p className="mb-8 text-sm text-muted max-w-xs">
+                The four pillars that define my work.
+              </p>
+              <AboutIllustration />
+            </FadeInView>
           </Container>
         </section>
 
