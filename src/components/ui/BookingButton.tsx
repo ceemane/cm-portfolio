@@ -4,7 +4,7 @@ import Script from "next/script";
 import { Calendar } from "lucide-react";
 
 // After signing up at cal.com, update this to your Cal.com username/event-slug
-const CAL_LINK = "chester-manuel/consulting";
+const CAL_LINK = "chesman2k1/consult";
 
 export function BookingButton({ className }: { className?: string }) {
   return (
