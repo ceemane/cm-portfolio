@@ -50,7 +50,12 @@ export async function POST(request: NextRequest) {
     lastVisit: null,
   };
 
-  await store.set(token);
+  try {
+    await store.set(token);
+  } catch (err) {
+    console.error("Redis set error:", err);
+    return NextResponse.json({ error: "Failed to save token", detail: String(err) }, { status: 500 });
+  }
 
   const baseUrl = process.env.SITE_URL || request.nextUrl.origin;
   const link = `${baseUrl}/auth/verify?token=${id}`;
