@@ -280,6 +280,35 @@ export default function AboutPage() {
           </Container>
         </section>
 
+        {/* Beyond Work */}
+        <section className="border-t border-border/60 py-20">
+          <Container>
+            <FadeInView>
+              <p className="mb-10 text-xs font-medium uppercase tracking-[0.25em] text-accent">
+                Beyond Work
+              </p>
+              <div className="max-w-2xl">
+                <a
+                  href="https://balintawak-bayarea.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="group flex items-start justify-between gap-6 rounded-xl border border-border bg-card p-5 transition-all hover:border-accent/30 hover:bg-card-hover"
+                >
+                  <div>
+                    <p className="text-sm font-medium text-foreground group-hover:text-accent transition-colors leading-snug">
+                      Tabimina Balintawak — Bay Area
+                    </p>
+                    <p className="mt-2 text-xs leading-relaxed text-muted">
+                      I train and teach Tabimina Balintawak, a modern style of Arnis developed in the 1950s by Anciong Bacon and passed down through his direct student Bob &quot;Silver&quot; Tabimina. Teaching outside of work keeps my instructional instincts sharp — breaking down complex movement patterns for beginners is not that different from making technical concepts stick.
+                    </p>
+                  </div>
+                  <ExternalLink className="mt-0.5 w-4 h-4 flex-shrink-0 text-muted group-hover:text-accent transition-colors" strokeWidth={1.5} />
+                </a>
+              </div>
+            </FadeInView>
+          </Container>
+        </section>
+
       </main>
       <Footer />
     </>
