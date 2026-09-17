@@ -12,6 +12,10 @@ Set these Vercel environment variables for every production deployment:
 
 Copy `.env.example` for local development. Do not commit actual values. The site is private by design: visitors must use a current link created from `/admin`.
 
+Logging into `/admin` creates a signed, HTTP-only admin session valid for seven
+days. During that period the site owner can browse the portfolio without an
+access token.
+
 The production deployment pings Upstash every Monday at 12:00 UTC. After
 deploying, set `CRON_SECRET` in Vercel's Production environment and confirm the
 job is enabled under **Settings → Cron Jobs**.

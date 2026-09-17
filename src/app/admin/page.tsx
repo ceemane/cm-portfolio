@@ -53,8 +53,27 @@ export default function AdminPage() {
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
-    setAuthenticated(true);
-    await fetchTokens();
+    setError("");
+    try {
+      const res = await fetch("/api/admin/session", {
+        method: "POST",
+        headers: { Authorization: `Bearer ${secret}` },
+      });
+      if (!res.ok) {
+        setError("Invalid secret");
+        return;
+      }
+      setAuthenticated(true);
+    } catch {
+      setError("Failed to sign in");
+    }
+  };
+
+  const handleLogout = async () => {
+    await fetch("/api/admin/session", { method: "DELETE" });
+    setAuthenticated(false);
+    setSecret("");
+    setTokens([]);
   };
 
   const handleGenerate = async (e: React.FormEvent) => {
@@ -166,6 +185,12 @@ export default function AdminPage() {
           >
             &larr; Portfolio
           </a>
+          <button
+            onClick={handleLogout}
+            className="text-sm text-[#86868b] transition-colors hover:text-[#1d1d1f]"
+          >
+            Sign Out
+          </button>
         </div>
 
         {error && (

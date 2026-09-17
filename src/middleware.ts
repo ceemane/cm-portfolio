@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { ADMIN_SESSION_COOKIE, hasValidAdminSession } from "@/lib/auth/admin-session";
 
 const PUBLIC_PATHS = [
   "/auth/verify",
@@ -18,11 +19,18 @@ function isPublicPath(pathname: string): boolean {
   return PUBLIC_PATHS.some((p) => pathname.startsWith(p));
 }
 
-export function middleware(request: NextRequest) {
+export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
   // Allow public paths through
   if (isPublicPath(pathname)) {
+    return NextResponse.next();
+  }
+
+  // Admin sessions are signed and stored in an HTTP-only cookie. They provide
+  // the site owner access without requiring a shareable portfolio token.
+  const adminSession = request.cookies.get(ADMIN_SESSION_COOKIE)?.value;
+  if (await hasValidAdminSession(adminSession)) {
     return NextResponse.next();
   }
 
