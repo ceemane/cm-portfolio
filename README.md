@@ -5,10 +5,16 @@ This is a private, token-gated portfolio built with [Next.js](https://nextjs.org
 Set these Vercel environment variables for every production deployment:
 
 - `ADMIN_SECRET`: a long, unique value used to access `/admin`.
+- `CRON_SECRET`: a separate random value (at least 16 characters) that Vercel
+  sends to authenticate the weekly Upstash keepalive job.
 - `UPSTASH_REDIS_REST_URL` and `UPSTASH_REDIS_REST_TOKEN`: persistent storage for private access tokens.
 - `SITE_URL`: `https://www.cmlearn.tech`.
 
 Copy `.env.example` for local development. Do not commit actual values. The site is private by design: visitors must use a current link created from `/admin`.
+
+The production deployment pings Upstash every Monday at 12:00 UTC. After
+deploying, set `CRON_SECRET` in Vercel's Production environment and confirm the
+job is enabled under **Settings → Cron Jobs**.
 
 ## Getting Started
 
