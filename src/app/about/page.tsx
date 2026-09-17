@@ -293,7 +293,7 @@ export default function AboutPage() {
               </p>
               <div className="max-w-2xl">
                 <a
-                  href="https://balintawak-bayarea.vercel.app"
+                  href="https://tbssf.vercel.app/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="group flex items-start justify-between gap-6 rounded-xl border border-border bg-card p-5 transition-all hover:border-accent/30 hover:bg-card-hover"
