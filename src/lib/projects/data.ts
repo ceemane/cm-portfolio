@@ -2,7 +2,7 @@ export interface Project {
   slug: string;
   title: string;
   subtitle: string;
-  type: "Course" | "Documentation" | "Training" | "Learning Plan";
+  type: "Course" | "Documentation" | "Training" | "Learning Plan" | "System";
   description: string;
   context: string;
   role: string;
@@ -16,6 +16,48 @@ export interface Project {
 }
 
 export const projects: Project[] = [
+  {
+    slug: "ai-content-operations-system",
+    title: "AI Content Operations System",
+    subtitle: "Claude-powered workflow for reliable, maintainable technical curriculum",
+    type: "System",
+    description:
+      "A full-stack content operations system that turns raw technical inputs into structured curriculum through role-based workflows, quality gates, and version-aware handoffs.",
+    context:
+      "Technical curriculum teams need to move quickly without losing source traceability, instructional quality, or ownership clarity as content changes.",
+    role:
+      "AI deployment architect and builder: designed the workflow, implemented the application and automation patterns, and defined the quality and handoff model.",
+    challenge:
+      "Create a workflow that accelerates technical content production while preserving human review, reusable structure, and confidence in the final learning asset.",
+    approach:
+      "Built a multi-role system using Claude as generation infrastructure, with structured outputs, validation gates, semantic versioning, and explicit review states. The architecture supports repeatable production of courses, labs, demos, and supporting documentation.",
+    impact: [
+      "Demonstrates AI-enabled curriculum operations rather than one-off prompting",
+      "Makes source structure, quality review, and content state visible for maintainable handoff",
+      "Combines React, Node.js, Python, and SQLite in a practical technical-content workflow",
+    ],
+  },
+  {
+    slug: "ai-content-orchestration-engine",
+    title: "AI Content Orchestration Engine",
+    subtitle: "Multi-agent system for technical workshop materials",
+    type: "System",
+    description:
+      "A multi-agent orchestration framework for producing structured technical workshop materials from a defined content brief.",
+    context:
+      "Technical enablement content must be coherent across labs, facilitator guidance, learner materials, and supporting documentation.",
+    role:
+      "System designer and builder: defined agent responsibilities, prompt chaining, schemas, and quality checks for the production workflow.",
+    challenge:
+      "Automate repeatable production tasks without compromising technical accuracy or the instructional logic of the learning experience.",
+    approach:
+      "Used prompt chaining and structured LLM outputs to coordinate specialized steps, with human review at decision points and reusable templates for consistent artifacts.",
+    impact: [
+      "Produces a repeatable workflow for technical workshop development",
+      "Uses JSON schemas and explicit handoffs to keep outputs inspectable and maintainable",
+      "Shows practical experience turning AI capabilities into an enablement operating system",
+    ],
+  },
   {
     slug: "ml-engineer-learning-plan",
     title: "AWS ML Engineer Associate Learning Plan",
@@ -31,8 +73,8 @@ export const projects: Project[] = [
     approach:
       "Mapped all exam domains to learning objectives, then sequenced 13 courses in a scaffolded progression. Integrated hands-on labs at key milestones so learners apply concepts immediately. Built knowledge checks throughout to reinforce retention and surface gaps before the exam.",
     impact: [
-      "153,000+ registrations with 4.4/5 learner satisfaction — the official ML Engineer Associate certification prep path on AWS Skill Builder",
-      "Spans 13 courses covering the full certification exam blueprint across data engineering, model development, deployment, and monitoring",
+      "Official certification-preparation learning path for machine learning practitioners",
+      "Covers the full exam blueprint across data engineering, model development, deployment, and monitoring",
       "Integrated hands-on labs provide practical experience with SageMaker, Bedrock, and other ML services",
       "Scaffolded design reduces learner drop-off across multi-week study plans",
     ],
@@ -40,28 +82,26 @@ export const projects: Project[] = [
   },
   {
     slug: "aws-jam-user-guide",
-    title: "AWS Jam Platform",
+    title: "Hands-On Technical Enablement Platform",
     subtitle: "Game-based group learning platform serving AWS customers, partners, and internal teams across cloud domains",
     type: "Training",
     description:
-      "Lead content management for AWS Jam, a gamified scenario-based group learning platform used by AWS customers, partners, and internal teams to upskill across AI/ML, Security, DevOps, Cloud Infrastructure, Storage, Compute, and Database domains. Advise and design Jam-based learning programs for Professional Services and customer organizations.",
+      "Content strategy and curriculum operations for a gamified, scenario-based platform used by customers, partners, and internal teams to build practical cloud skills across AI, security, DevOps, and infrastructure domains.",
     context:
-      "AWS Jam is a hands-on, game-based group learning platform where teams solve real AWS challenges in live sandbox environments. It serves a broad audience including AWS customers training their internal engineering teams, AWS partners and resellers, AWS internal staff such as SAs, TAMs, and BDMs, and attendees at marquee events like AWS re:Invent. Jam is delivered as facilitated group events, embedded within broader learning programs, and at AWS events globally. The platform hosts 300+ active products spanning AI/ML, Security, DevOps, Cloud Infrastructure, Storage, Compute, and Database, with industry-specific tracks for Financial Services, Healthcare and Life Sciences, and Automotive and Manufacturing.",
-    role: "Technical Content Manager: own strategy and roadmap for the AWS Jam LXP. Direct learning program management and instructional design for multi-modal training combining ILT, self-paced, and group-based gamified Jam experiences across a cross-functional team of 40 content developers. Developed 110 individual challenge labs and secured the full 300+ lab portfolio against exploitation through a custom threat model and MCP-connected security ticket automation. Scale a distributed creator community of 400+ through a Center of Excellence program.",
+      "The platform gives teams live sandbox challenges to practice technical skills in facilitated events, broader learning programs, and field enablement. Its curriculum spans AI, security, DevOps, cloud infrastructure, storage, compute, databases, and industry-focused use cases.",
+    role: "Technical Content Manager: own curriculum strategy and roadmap; direct multi-modal learning design across instructor-led, self-paced, and group-based experiences; build hands-on labs; and establish the review, security, and content-operations practices that keep the catalog reliable.",
     challenge:
-      "Scale content quality and velocity across 300+ active products while advising and designing Jam learning programs for diverse customer organizations, partner teams, and internal AWS audiences across multiple cloud domains and industry verticals.",
+      "Keep a broad technical curriculum current, secure, and usable in live learning environments while adapting it for varied customer, partner, and field needs.",
     approach:
-      "Built a Center of Excellence program to elevate 400+ content creators to top-10% quality standards through multi-modal program design spanning ILT, self-paced eLearning, and group-based gamified Jam experiences. Developed 110 individual challenge labs and secured the full 300+ lab portfolio through a custom threat model and MCP-connected security ticket automation — zero security incidents since 2024. Consult with Professional Services and customers to map skill gaps to challenge content and design full Jam-based learning programs. Deployed a fleet of 13 autonomous AI agents automating end-to-end challenge lifecycle management—reducing manual work by 99% (17.6 hrs/week to 10 min/week), 86+ automated runs per day. Led development of 110+ challenges for re:Invent 2025 with 40 SMEs across Generative AI, Security, and DevOps.",
+      "Created reusable design and review practices for hands-on learning across instructor-led, self-paced, and group-based experiences. Built cloud labs, partnered with customer-facing teams to map skill gaps to learning journeys, and introduced AI-assisted workflows for proposal intake, review, security checks, and content readiness. Kept documentation, facilitator guidance, and maintenance practices aligned as products and services evolved.",
     impact: [
-      "50K+ learners served across AWS customers, partners, and internal teams with 4.38/5 satisfaction",
       "Directed multi-modal training design combining ILT, self-paced eLearning, and group-based gamified Jam learning programs",
-      "Developed 110 individual challenge labs; secured 300+ lab portfolio through custom threat model and MCP-connected security ticket automation — zero security incidents since 2024",
+      "Built hands-on labs and security review practices for a broad cloud curriculum",
       "Advised and designed Jam-based learning programs for Professional Services customers across FSI, Healthcare, and Automotive verticals",
-      "400+ content creators elevated through Center of Excellence program to top-10% AWS performance metrics",
-      "110+ challenges developed for AWS re:Invent 2025 (60K+ senior leaders and engineers)",
-      "99% reduction in manual operational work via 13-agent AI fleet (17.6 hrs/week to 10 min/week, 86+ automated runs/day)",
-      "Content Proposal Automation reduced approval cycle from 2 months to 1 day",
-      "AI-powered monitoring: 100% defect auto-detection, 95% content health score, 98% on-time maintenance, 95% SLA breach reduction across 50 distributed maintainers",
+      "Established a creator enablement and quality-review practice for distributed technical contributors",
+      "Curated live learning experiences across AI, security, and DevOps for technical audiences",
+      "Applied multi-agent AI workflows to curriculum lifecycle management",
+      "Created automation and monitoring patterns that make content operations more reliable",
     ],
     pdfFile: "aws-jam-user-guide.pdf",
     externalUrl: "https://jam.aws.com/",
@@ -81,7 +121,7 @@ export const projects: Project[] = [
     approach:
       "Built in Articulate Rise with decision-tree frameworks, scenario-based knowledge checks, and interactive visual aids. Created real AWS service examples to ground abstract concepts. Aligned all content to exam objectives.",
     impact: [
-      "95% completion rate across the ML Engineer Associate certification prep path",
+      "Core interactive module in a machine learning certification-preparation path",
       "Core Rise-built module in the ML Engineer Associate certification prep path",
       "Decision-tree framework adopted by learners as a practical job aid",
       "Scenario-based assessments reinforced application over memorization",
@@ -104,7 +144,7 @@ export const projects: Project[] = [
     approach:
       "Built in Articulate Rise with a scaffolded progression from basic training concepts to complex multi-model tuning scenarios. Used annotated SageMaker console walkthroughs and interactive knowledge checks to reduce cognitive load.",
     impact: [
-      "95% completion rate across the ML Engineer Associate certification prep path",
+      "Hands-on module in a machine learning certification-preparation path",
       "Rise-built module enabling learners to configure and run SageMaker training jobs independently",
       "Scaffolded eLearning design reduced drop-off in the certification prep pipeline",
       "Interactive knowledge checks reinforced learning at each stage",
@@ -127,7 +167,7 @@ export const projects: Project[] = [
     approach:
       "Built in Articulate Rise using a 'zoom in/zoom out' structure: start with the big picture data pipeline, then explore each stage with the relevant AWS service. Used consistent visual metaphors and interactive knowledge checks throughout.",
     impact: [
-      "95% completion rate across the AWS analytics learning path",
+      "Foundational analytics course in a technical learning catalog",
       "Rise-built foundational analytics course in the AWS training catalog",
       "Data pipeline mental model reused across advanced analytics courses",
       "Directly relevant for data engineering teams evaluating analytics tooling",
@@ -150,7 +190,7 @@ export const projects: Project[] = [
     approach:
       "Built in Articulate Rise with progressive complexity: individual service deep-dives composed into interactive reference architecture scenarios. Interactive exercises require learners to make real architectural decisions.",
     impact: [
-      "95% completion rate across the AWS analytics learning path",
+      "Advanced analytics course completing a technical learning path",
       "Rise-built course completing the analytics fundamentals learning path",
       "Reference architecture patterns adopted by AWS Solutions Architects for customer workshops",
       "Interactive architecture exercises validated real-world design skills",
@@ -195,7 +235,7 @@ export const projects: Project[] = [
       "Developed performance-based exam questions aligned to competency frameworks for each release. Created accompanying training materials including flipped-classroom modules. Partnered with SMEs to validate technical accuracy against each release's feature set.",
     impact: [
       "Certification exams adopted as the global standard for ServiceNow CSM credentials",
-      "Covered three consecutive platform releases maintaining exam validity and relevance",
+      "Maintained exam validity and relevance across successive platform releases",
       "Performance-based questions validated real-world implementation skills, not just recall",
     ],
     externalUrl: "https://learning.servicenow.com/lxp/en/pages/now-learning-get-certified?id=amap_detail&achievement_id=c162be7847f60a505cbdaf44846d43f5",
@@ -217,7 +257,7 @@ export const projects: Project[] = [
     impact: [
       "FSM certification adopted as the standard credential for implementation consultants",
       "Pre-sales enablement equipped SEs with demo tools accelerating sales cycles",
-      "Spanned two platform releases (New York, Orlando) with release-aligned content updates",
+      "Kept certification content aligned with successive product releases",
     ],
     externalUrl: "https://learning.servicenow.com/lxp/en/pages/now-learning-get-certified?id=amap_detail&achievement_id=5265835f1b63c514998555fa234bcbb4",
   },
@@ -227,20 +267,18 @@ export const projects: Project[] = [
     subtitle: "Advanced certification program for ServiceNow platform architects",
     type: "Training",
     description:
-      "Co-developed the Certified Technical Architect (CTA) program at ServiceNow, an advanced certification covering architecture design, integration, security, and governance. Built using a flipped-classroom competency model that generated $1.6M ARR.",
+      "Co-developed the Certified Technical Architect (CTA) program at ServiceNow, an advanced certification covering architecture design, integration, security, and governance through a flipped-classroom competency model.",
     context:
       "ServiceNow needed a rigorous, scalable certification program for its most advanced technical practitioners. The CTA credential validates expertise across architecture, integration, security, and governance on the ServiceNow platform.",
-    role: "Senior Technical Curriculum Developer: architected the flipped-classroom competency model, led a cross-functional team of 8-12 to deliver 36 modules in 4 months, and developed psychometrics-based certification exams with the global certification manager.",
+    role: "Senior Technical Curriculum Developer: architected the flipped-classroom competency model, led cross-functional delivery, and developed psychometrics-based certification exams with the global certification manager.",
     challenge:
-      "Design an advanced certification program that credibly validates architectural expertise while scaling delivery across global audiences and generating measurable business impact.",
+      "Design an advanced certification program that credibly validates architectural expertise while scaling delivery across global audiences.",
     approach:
       "Built a flipped-classroom model combining self-paced pre-work with live, scenario-based workshops. Developed psychometrics-based exam questions aligned to competency frameworks. Created train-the-trainer programs and GTM support for alliance partners to scale delivery globally.",
     impact: [
-      "Generated $1.6M ARR through the training program",
       "Won 2022 CEdMA Innovation Award for blended learning program design",
-      "Achieved 4.65/5 customer satisfaction through learner-centered design",
-      "Delivered 36 modules in 4 months with a cross-functional team of 8-12",
-      "Re-platformed 3-day ILT to 12-hour self-paced training, reducing learner time commitment by 50%",
+      "Delivered an advanced, learner-centered architecture certification program",
+      "Re-platformed instructor-led learning into a self-paced experience",
       "Psychometrics-based certification exams adopted as the standard for CSM and FSM credentials",
       "Train-the-trainer programs scaled delivery capabilities across alliance partners globally",
     ],

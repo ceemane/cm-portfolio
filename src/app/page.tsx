@@ -44,14 +44,14 @@ export default function HomePage() {
                 </div>
                 <div className="space-y-6">
                   <p className="text-base leading-relaxed text-muted">
-                    From CSUMB&apos;s Instructional Science &amp; Technology program
-                    to Stanford, Stanford Health Care, ServiceNow, and AWS,
-                    I&apos;ve spent my career at the intersection of learning
-                    science and technology.
+                    Across Stanford, ServiceNow, and AWS, I&apos;ve spent my career
+                    building the enablement systems that help technical audiences
+                    adopt complex products and capabilities with confidence.
                   </p>
                   <p className="text-base leading-relaxed text-muted">
-                    Turning complex systems into clear, engaging experiences
-                    that trace back to real-world performance.
+                    My work connects GTM enablement, customer education, AI,
+                    and training content into practical systems that support
+                    real-world performance.
                   </p>
                   <Link
                     href="/about"

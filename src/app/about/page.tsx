@@ -13,11 +13,11 @@ export const metadata: Metadata = {
 
 const skillGroups = [
   {
-    category: "Instructional Design",
+    category: "Customer Education",
     icon: BookOpen,
     skills: [
       "Curriculum Design",
-      "Learning Experience Design (LXD)",
+      "Technical Learning Experience Design",
       "Scenario-Based Learning",
       "Storyboarding",
       "Backwards Design",
@@ -32,7 +32,7 @@ const skillGroups = [
     ],
   },
   {
-    category: "Content & Media",
+    category: "Training Content",
     icon: Film,
     skills: [
       "Articulate Rise",
@@ -48,17 +48,19 @@ const skillGroups = [
     ],
   },
   {
-    category: "Enablement & GTM",
+    category: "GTM Enablement",
     icon: Megaphone,
     skills: [
       "Pre-Sales Technical Training",
       "GTM Release Enablement",
       "Demo Enablement",
-      "Customer Lifecycle Enablement",
       "Partner Enablement",
       "Field-Ready Learning Assets",
       "Knowledge Checks",
       "Certification & Credentialing",
+      "API Documentation",
+      "Release Readiness",
+      "Maintainable Handoffs",
     ],
   },
   {
@@ -84,11 +86,15 @@ const skillGroups = [
     ],
   },
   {
-    category: "Program Management",
+    category: "Systems Architecture",
     icon: BarChart2,
     skills: [
+      "Content Operations",
+      "Curriculum Lifecycle Management",
+      "Quality Gates & Review Workflows",
+      "Knowledge Architecture",
+      "AI-Augmented Production Pipelines",
       "ADDIE",
-      "SAM (Successive Approximation)",
       "Agile / Scrum",
       "Needs Analysis",
       "Stakeholder Alignment",
@@ -101,15 +107,13 @@ const skillGroups = [
     category: "Platforms & Tools",
     icon: Wrench,
     skills: [
-      "AWS Skill Builder",
-      "AWS Jam",
-      "Docebo (LMS)",
+      "LMS / LXP Administration",
       "Jira",
       "Taskei",
-      "QuickSight",
+      "Analytics & Reporting",
       "Confluence",
       "SharePoint",
-      "Highspot",
+      "Enablement Platforms",
     ],
   },
 ];
@@ -118,12 +122,12 @@ const bios = [
   {
     label: "Background",
     content:
-      "I'm a Learning Leader and AI Systems Builder with 12+ years designing scalable L&D infrastructure, certification programs, field enablement systems, and AI-powered content operations at global technology companies. My career has taken me from CSUMB's Instructional Science & Technology program to Stanford University, Stanford Health Care, ServiceNow, and Amazon Web Services, where I've developed training reaching 153K+ learners with 4.4/5 satisfaction and built 20+ Articulate Rise modules achieving 95% completion rates across AI/ML, analytics, security, and cloud domains. I apply ADDIE and SAM frameworks to match design rigor to project constraints, from rapid iterations in Agile/Scrum environments at ServiceNow and AWS to full-cycle curriculum builds at Stanford Health Care. MS in Instructional Science and Technology. AWS Certified AI Practitioner (valid through 2027).",
+      "I am a technical curriculum developer and training systems architect with 12+ years across Stanford, ServiceNow, and AWS. I design the courses, labs, demos, presentations, and operating systems that help technical audiences adopt complex products. My work combines instructional rigor with hands-on technical practice, from customer education and technical onboarding to field enablement and release-ready learning content. I hold an MS in Instructional Science and Technology and am an AWS Certified AI Practitioner.",
   },
   {
-    label: "At AWS",
+    label: "GTM Enablement & Customer Education",
     content:
-      "As Technical Content Manager at AWS, I own strategy and roadmap for the AWS Jam LXP—scaling the platform from 30K+ to 50K+ customer developers (30% YoY growth)—while directing 40 content developers and a creator community of 400+ elevated to top-10% AWS performance. I lead multi-modal training design combining ILT, self-paced learning, and group-based gamified Jam experiences; developed 110 individual challenge labs; and secured 300+ labs against exploitation through a custom threat model and MCP-connected security ticket automation, maintaining zero security incidents since 2024. I also deployed a 13-agent AI fleet cutting manual ops by 99% (17.6 hrs/week to 10 min/week, 86+ automated runs/day) and an AI monitoring system across 300+ active products achieving 100% defect auto-detection, 95% content health score, 98% on-time maintenance, and 95% SLA breach reduction across 50 distributed maintainers.",
+      "I build enablement programs around the way technical teams actually learn and work. That means curating source material into reusable curriculum, designing labs and demos that hold up in live delivery, partnering with program owners and product marketing on priorities, and keeping content current as products change. My work spans customer education, technical onboarding, pre-sales enablement, certification, and field-ready learning assets.",
   },
   {
     label: "Philosophy",
@@ -133,7 +137,7 @@ const bios = [
   {
     label: "AI & Automation",
     content:
-      "I build AI systems in production. At AWS, a 13-agent autonomous fleet cut challenge management from 17.6 hrs/week to 10 min/week, and a Kiro-powered Jam Challenge Builder reduced challenge delivery from 40–80 hours to 4 hours. I've also built a multi-agent content orchestration engine that reduced manual content generation effort by 90%, and a full-stack content operations platform on Claude Sonnet 4.5 with four-role workflows, structural quality gates, and automatic semantic versioning. Every system is designed with human-in-the-loop review and production-grade reliability from day one.",
+      "I build AI-enabled content operations systems, not just AI-assisted drafts. My work includes multi-agent orchestration, Claude-based workflows, MCP servers, structured LLM evaluation, RAG knowledge tools, and automation for curriculum lifecycle management. I design for human review, reliable outputs, traceable sources, and maintainable handoff so AI accelerates technical content without reducing its quality.",
   },
 ];
 

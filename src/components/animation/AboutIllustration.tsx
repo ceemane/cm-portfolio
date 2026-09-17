@@ -101,7 +101,7 @@ export function AboutIllustration() {
         <text className="lbl" x={CX} y={CY - SR - NR - 18}
           textAnchor="middle" fontSize="14" fill="#f0faf7" fontFamily="system-ui" fontWeight="600">Learner</text>
         <text className="lbl" x={CX} y={CY - SR - NR - 3}
-          textAnchor="middle" fontSize="12" fill="#7aa89f" fontFamily="system-ui">50K+ served</text>
+          textAnchor="middle" fontSize="12" fill="#7aa89f" fontFamily="system-ui">Customer education</text>
 
         {/* ── RIGHT: Credential (320, 250) ─────────────── */}
         <g className="outer-node">
@@ -118,7 +118,7 @@ export function AboutIllustration() {
         <text className="lbl" x={CX + SR} y={CY + NR + 22}
           textAnchor="middle" fontSize="14" fill="#f0faf7" fontFamily="system-ui" fontWeight="600">Credential</text>
         <text className="lbl" x={CX + SR} y={CY + NR + 39}
-          textAnchor="middle" fontSize="12" fill="#7aa89f" fontFamily="system-ui">$1.6M ARR</text>
+          textAnchor="middle" fontSize="12" fill="#7aa89f" fontFamily="system-ui">GTM readiness</text>
 
         {/* ── BOTTOM: AI Agent (200, 370) ──────────────── */}
         <g className="outer-node">
@@ -138,7 +138,7 @@ export function AboutIllustration() {
         <text className="lbl" x={CX} y={CY + SR + NR + 22}
           textAnchor="middle" fontSize="14" fill="#f0faf7" fontFamily="system-ui" fontWeight="600">AI Agent</text>
         <text className="lbl" x={CX} y={CY + SR + NR + 39}
-          textAnchor="middle" fontSize="12" fill="#7aa89f" fontFamily="system-ui">99% ops saved</text>
+          textAnchor="middle" fontSize="12" fill="#7aa89f" fontFamily="system-ui">AI enablement</text>
 
         {/* ── LEFT: Content (80, 250) ──────────────────── */}
         <g className="outer-node">
@@ -156,7 +156,7 @@ export function AboutIllustration() {
         <text className="lbl" x={CX - SR} y={CY + NR + 22}
           textAnchor="middle" fontSize="14" fill="#f0faf7" fontFamily="system-ui" fontWeight="600">Content</text>
         <text className="lbl" x={CX - SR} y={CY + NR + 39}
-          textAnchor="middle" fontSize="12" fill="#7aa89f" fontFamily="system-ui">95% complete</text>
+          textAnchor="middle" fontSize="12" fill="#7aa89f" fontFamily="system-ui">Training content</text>
       </svg>
     </div>
   );

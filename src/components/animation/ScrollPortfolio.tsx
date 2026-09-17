@@ -56,8 +56,12 @@ export function ScrollPortfolio() {
             Selected Work
           </p>
           <h2 className="text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
-            Portfolio
+            Technical Curriculum Systems
           </h2>
+          <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted">
+            Selected work in AI-enabled content operations, hands-on technical learning,
+            customer education, and GTM enablement.
+          </p>
         </div>
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">

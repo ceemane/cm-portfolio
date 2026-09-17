@@ -12,7 +12,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "Chester Manuel | Learning, Engineered.",
   description:
-    "Instructional design portfolio showcasing AWS training and documentation projects.",
+    "Portfolio of GTM enablement, customer education, AI enablement, and training systems architecture work.",
   robots: {
     index: false,
     follow: false,

@@ -77,7 +77,7 @@ export function ScrollHero() {
 
       <div className="relative z-10 w-full mx-auto max-w-5xl px-6 py-24 sm:py-32">
         <p ref={labelRef} className="mb-8 text-xs font-medium uppercase tracking-[0.3em] text-accent">
-          Learning Leader &amp; AI Systems Builder
+          GTM Enablement · Customer Education · AI Systems
         </p>
 
         <div ref={line1Ref}>
@@ -93,9 +93,9 @@ export function ScrollHero() {
 
         <div ref={bioRef} className="mt-12 max-w-lg border-l-2 border-accent/30 pl-6">
           <p className="text-base leading-relaxed text-muted">
-            Learning Leader and AI Systems Builder with 12+ years at Stanford,
-            ServiceNow, and AWS. Currently scaling 50K+ learners on the AWS Jam
-            platform and deploying AI agent systems that reduce manual ops by 99%.
+            Training content and systems architect with 12+ years across Stanford,
+            ServiceNow, and AWS. I design customer education, GTM enablement, and
+            Claude-based AI systems for technical audiences.
           </p>
         </div>
 
