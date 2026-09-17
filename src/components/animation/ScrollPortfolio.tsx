@@ -7,9 +7,22 @@ import { Badge } from "@/components/ui/Badge";
 import { Card } from "@/components/ui/Card";
 import { projects } from "@/lib/projects/data";
 
+// Lead with the recruiter-relevant proof: courses and learning experiences,
+// followed by the systems that show how the work is scaled and maintained.
+const portfolioOrder: Record<string, number> = {
+  Course: 0,
+  "Learning Plan": 1,
+  Training: 2,
+  Documentation: 3,
+  System: 4,
+};
+
 gsap.registerPlugin(ScrollTrigger);
 
 export function ScrollPortfolio() {
+  const orderedProjects = [...projects].sort(
+    (a, b) => (portfolioOrder[a.type] ?? 99) - (portfolioOrder[b.type] ?? 99),
+  );
   const sectionRef = useRef<HTMLElement>(null);
   const headerRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
@@ -56,7 +69,7 @@ export function ScrollPortfolio() {
             Selected Work
           </p>
           <h2 className="text-4xl font-semibold tracking-tight text-foreground sm:text-5xl">
-            Technical Curriculum Systems
+            Courses, Labs & Enablement
           </h2>
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted">
             Selected work in AI-enabled content operations, hands-on technical learning,
@@ -65,7 +78,7 @@ export function ScrollPortfolio() {
         </div>
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {projects.map((project, i) => (
+          {orderedProjects.map((project, i) => (
             <div key={project.slug} ref={(el) => { cardsRef.current[i] = el; }}>
               <Card href={`/project/${project.slug}`}>
                 <Badge variant="accent">{project.type}</Badge>
