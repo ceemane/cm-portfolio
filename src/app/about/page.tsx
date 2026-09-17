@@ -122,7 +122,7 @@ const bios = [
   {
     label: "Background",
     content:
-      "I am a technical curriculum developer and training systems architect with 12+ years across Stanford, ServiceNow, and AWS. I design the courses, labs, demos, presentations, and operating systems that help technical audiences adopt complex products. My work combines instructional rigor with hands-on technical practice, from customer education and technical onboarding to field enablement and release-ready learning content. I hold an MS in Instructional Science and Technology and am an AWS Certified AI Practitioner.",
+      "I am a technical curriculum developer and training systems architect with 12+ years across Stanford, ServiceNow, and AWS. I design the courses, labs, demos, presentations, and operating systems that help technical audiences adopt complex products. My work combines instructional rigor with hands-on technical practice, from customer education and technical onboarding to field enablement and release-ready learning content. I hold an MS in Instructional Science and Technology, a BS in Computer Science, and am an AWS Certified AI Practitioner.",
   },
   {
     label: "GTM Enablement & Customer Education",
