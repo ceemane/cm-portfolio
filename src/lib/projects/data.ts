@@ -220,6 +220,48 @@ export const projects: Project[] = [
     videoUrl: "https://fxj0ysdpgxsoketu.public.blob.vercel-storage.com/videos/INTRO_v1.mp4",
   },
   {
+    slug: "utilization-management-platform",
+    title: "Utilization Management Case Review Platform",
+    subtitle: "Founder & AI Deployment Architect — autonomous agent system for Medicare payment review",
+    type: "Documentation",
+    description:
+      "Founder and AI deployment architect of a Medicare utilization management platform using autonomous Claude Code agents with a custom orchestrator to build 16 interdependent clinical workflow modules with human-in-the-loop review gates and explainability.",
+    context:
+      "Medicare payment review is a high-stakes, highly regulated workflow where errors carry real financial and compliance consequences. Building it required both deep process understanding and production-grade AI agent architecture, not a demo.",
+    role: "Founder & AI Deployment Architect: designed the system architecture, built the custom orchestrator, and directed a fleet of autonomous Claude Code agents to implement 16 interdependent clinical workflow modules.",
+    challenge:
+      "Build a multi-module clinical workflow system reliable enough for regulated payment review, with every automated decision explainable and every critical step gated by human review, using autonomous coding agents rather than a traditional engineering team.",
+    approach:
+      "Architected a custom orchestrator to coordinate autonomous Claude Code agents across 16 interdependent modules, each scoped narrowly enough for an agent to implement reliably. Built human-in-the-loop review gates at every critical decision point and designed for explainability from the start, so every automated determination can be traced and justified.",
+    impact: [
+      "16 interdependent clinical workflow modules built and orchestrated by autonomous AI agents",
+      "Human-in-the-loop review gates at every critical decision point for a regulated, high-stakes domain",
+      "Explainability designed in from the architecture up, not bolted on after the fact",
+      "Demonstrates production-grade multi-agent orchestration applied to a regulated, real-world compliance workflow",
+    ],
+  },
+  {
+    slug: "ai-content-operations-system",
+    title: "AI-Powered Content Operations System",
+    subtitle: "Full-stack multi-agent content platform built on Claude Sonnet 4.5",
+    type: "Documentation",
+    description:
+      "Full-stack, multi-role content operations platform using Claude Sonnet 4.5 as core generation infrastructure, paired with a multi-agent content orchestration engine that reduced manual content generation effort 90% and a Kiro-powered challenge builder agent that cut delivery time from days to hours.",
+    context:
+      "Technical content production at scale is bottlenecked by manual drafting, inconsistent quality gates, and version confusion across dozens of contributors. This system was built to remove that bottleneck without removing human judgment from the loop.",
+    role: "AI Systems Builder: architected and built the full-stack platform, the multi-agent orchestration engine, and the Kiro-powered challenge builder agent end to end.",
+    challenge:
+      "Automate the bulk of technical content generation and quality assurance while preserving structural consistency, semantic versioning, and a clear human review checkpoint at every content state transition.",
+    approach:
+      "Built a four-role operational workflow (React 18, Node.js/Express, Python, SQLite) with structural quality validation gates and automatic semantic versioning triggered on content state transitions. Separately built a multi-agent orchestration engine using prompt chaining and structured LLM output to automate production of technical workshop materials. Applied the same orchestration pattern to a Kiro-powered Jam Challenge Builder Agent that automates full challenge spec, design, and implementation.",
+    impact: [
+      "Multi-agent content orchestration engine reduced manual content generation effort by 90%",
+      "Kiro Jam Challenge Builder Agent cut challenge delivery from 40-80 hours down to 4 hours",
+      "Four-role workflow with structural quality gates and automatic semantic versioning on every content state transition",
+      "Production system, not a prototype: built on Claude Sonnet 4.5 as core generation infrastructure",
+    ],
+  },
+  {
     slug: "servicenow-csm-certification",
     title: "ServiceNow CSM Certification (Kingston, London, Madrid)",
     subtitle: "Customer Service Management certification across three platform releases",
