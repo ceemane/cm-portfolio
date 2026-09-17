@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { getTokenStore } from "@/lib/tokens/store";
 import { nanoid } from "nanoid";
 
-const ADMIN_SECRET = process.env.ADMIN_SECRET || "cm-admin-2026";
+const ADMIN_SECRET = process.env.ADMIN_SECRET;
 
 function unauthorized() {
   return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
@@ -10,7 +10,9 @@ function unauthorized() {
 
 function checkAuth(request: NextRequest): boolean {
   const auth = request.headers.get("authorization");
-  return auth === `Bearer ${ADMIN_SECRET}`;
+  // Never fall back to a source-controlled secret. If the deployment has not
+  // been configured, the admin API must remain unavailable.
+  return Boolean(ADMIN_SECRET) && auth === `Bearer ${ADMIN_SECRET}`;
 }
 
 // List all tokens

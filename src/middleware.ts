@@ -9,7 +9,6 @@ const PUBLIC_PATHS = [
   "/_next",
   "/api/auth",
   "/api/admin",
-  "/api/debug",
   "/admin",
   "/blog",
 ];

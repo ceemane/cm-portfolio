@@ -1,4 +1,14 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This is a private, token-gated portfolio built with [Next.js](https://nextjs.org).
+
+## Production configuration
+
+Set these Vercel environment variables for every production deployment:
+
+- `ADMIN_SECRET`: a long, unique value used to access `/admin`.
+- `UPSTASH_REDIS_REST_URL` and `UPSTASH_REDIS_REST_TOKEN`: persistent storage for private access tokens.
+- `SITE_URL`: `https://www.cmlearn.tech`.
+
+Copy `.env.example` for local development. Do not commit actual values. The site is private by design: visitors must use a current link created from `/admin`.
 
 ## Getting Started
 
