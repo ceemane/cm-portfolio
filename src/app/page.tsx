@@ -70,7 +70,7 @@ export default function HomePage() {
         </section>
 
         {/* Technical content delivery */}
-        <section className="border-t border-border/60 py-20 sm:py-24">
+        <section className="border-t border-border/60 bg-background py-20 sm:py-24">
           <Container>
             <FadeInView>
               <div className="grid gap-10 lg:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)] lg:items-start lg:gap-16">
@@ -109,7 +109,7 @@ export default function HomePage() {
         </section>
 
         {/* About */}
-        <section className="relative overflow-hidden border-t border-border bg-surface py-24 sm:py-32">
+        <section className="relative overflow-hidden border-t border-border bg-surface-raised py-24 sm:py-32">
           <div
             aria-hidden="true"
             className="pointer-events-none absolute right-0 top-0 h-full w-1/2"
@@ -152,7 +152,7 @@ export default function HomePage() {
         </section>
 
         {/* Contact CTA */}
-        <section className="relative overflow-hidden py-32 sm:py-40">
+        <section className="relative overflow-hidden bg-background py-32 sm:py-40">
           <div
             aria-hidden="true"
             className="pointer-events-none absolute inset-0"
