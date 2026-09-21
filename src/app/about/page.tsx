@@ -256,47 +256,6 @@ export default function AboutPage() {
           </Container>
         </section>
 
-        {/* Writing */}
-        <section className="border-t border-border/60 bg-surface py-20">
-          <Container>
-            <FadeInView>
-              <p className="mb-10 text-xs font-medium uppercase tracking-[0.25em] text-accent">
-                Writing
-              </p>
-              <div className="space-y-6 max-w-2xl">
-                {[
-                  {
-                    title: "Accelerate your business intelligence skills with AWS Jam and Amazon QuickSight",
-                    date: "May 2026",
-                    url: "https://aws.amazon.com/blogs/training-and-certification/accelerate-your-business-intelligence-skills-with-aws-jam-and-amazon-quick/",
-                  },
-                  {
-                    title: "Transform your Machine Learning career through AWS Jam",
-                    date: "July 2025",
-                    url: "https://aws.amazon.com/blogs/training-and-certification/transform-your-machine-learning-career-through-aws-jam/",
-                  },
-                ].map((post) => (
-                  <a
-                    key={post.url}
-                    href={post.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group flex items-start justify-between gap-6 rounded-xl border border-border bg-card p-5 transition-all hover:border-accent/30 hover:bg-card-hover"
-                  >
-                    <div>
-                      <p className="text-sm font-medium text-foreground group-hover:text-accent transition-colors leading-snug">
-                        {post.title}
-                      </p>
-                      <p className="mt-1 text-xs text-muted">AWS Training &amp; Certification Blog &middot; {post.date}</p>
-                    </div>
-                    <ExternalLink className="mt-0.5 w-4 h-4 flex-shrink-0 text-muted group-hover:text-accent transition-colors" strokeWidth={1.5} />
-                  </a>
-                ))}
-              </div>
-            </FadeInView>
-          </Container>
-        </section>
-
         {/* Beyond Work */}
         <section className="border-t border-border/60 py-20">
           <Container>
