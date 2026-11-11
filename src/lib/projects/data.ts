@@ -1,3 +1,21 @@
+import { portfolioSamples } from "./portfolio-samples";
+
+export interface ProjectImage {
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+}
+
+export interface ProjectFile {
+  label: string;
+  description: string;
+  href: string;
+  downloadName: string;
+  /** PDFs can open in the page. Decks are download-only. */
+  viewable?: boolean;
+}
+
 export interface Project {
   slug: string;
   title: string;
@@ -12,10 +30,14 @@ export interface Project {
   pdfFile?: string; // filename in content/pdfs or Vercel Blob key
   externalUrl?: string; // link to live artifact (e.g. AWS Skill Builder)
   videoUrl?: string; // direct video URL (Vercel Blob)
-  images?: { src: string; alt: string }[]; // screenshots in public/images/
+  images?: ProjectImage[]; // screenshots in public/
+  files?: ProjectFile[];
+  disclaimer?: string;
+  featured?: boolean;
 }
 
 export const projects: Project[] = [
+  ...portfolioSamples,
   {
     slug: "ai-content-operations-system",
     title: "AI Content Operations System",

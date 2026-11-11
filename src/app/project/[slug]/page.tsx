@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/Badge";
 import { FadeInView } from "@/components/animation/FadeInView";
 import { projects, getProject } from "@/lib/projects/data";
 import { PdfViewer } from "@/components/pdf/PdfViewer";
-import Image from "next/image";
+import { ProjectFiles } from "@/components/projects/ProjectFiles";
 import Link from "next/link";
 import type { Metadata } from "next";
 
@@ -82,6 +82,11 @@ export default async function ProjectPage({ params }: PageProps) {
                 {project.title}
               </h1>
               <p className="mt-3 text-base text-muted">{project.subtitle}</p>
+              {project.disclaimer && (
+                <p className="mt-5 text-xs font-medium uppercase tracking-[0.18em] text-muted-subtle">
+                  {project.disclaimer}
+                </p>
+              )}
             </FadeInView>
           </Container>
         </section>
@@ -140,12 +145,13 @@ export default async function ProjectPage({ params }: PageProps) {
                       key={i}
                       className="overflow-hidden rounded-2xl border border-border"
                     >
-                      <Image
+                      {/* eslint-disable-next-line @next/next/no-img-element */}
+                      <img
                         src={img.src}
                         alt={img.alt}
-                        width={800}
-                        height={500}
-                        className="w-full h-auto"
+                        width={img.width ?? 800}
+                        height={img.height ?? 500}
+                        className="h-auto w-full"
                       />
                     </div>
                   ))}
@@ -177,13 +183,16 @@ export default async function ProjectPage({ params }: PageProps) {
         )}
 
         {/* Artifact */}
-        {(project.pdfFile || project.externalUrl) && (
+        {(project.pdfFile || project.externalUrl || (project.files && project.files.length > 0)) && (
           <section className="border-t border-border/60 py-16">
             <Container>
               <FadeInView>
                 <p className="mb-6 text-xs font-medium uppercase tracking-[0.25em] text-accent">
-                  Artifact
+                  {project.files?.length ? "What's included" : "Artifact"}
                 </p>
+                {project.files && project.files.length > 0 && (
+                  <ProjectFiles files={project.files} />
+                )}
                 <div className="flex flex-wrap gap-4">
                   {project.externalUrl && (
                     <a
