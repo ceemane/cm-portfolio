@@ -4,11 +4,12 @@ import { Footer } from "@/components/layout/Footer";
 import { Container } from "@/components/ui/Container";
 import { FadeInView } from "@/components/animation/FadeInView";
 import { MapPin } from "lucide-react";
+import { RecruiterContactSentence, RecruiterMailButton } from "@/components/contact/RecruiterEmail";
 
 export const metadata: Metadata = {
   title: "Contact | Chester M.",
   description:
-    "Reach Chester M. on LinkedIn. No email address is published on this site.",
+    "Reach Chester M. on LinkedIn, or use the recruiter email on this page.",
 };
 
 export default function ContactPage() {
@@ -43,7 +44,7 @@ export default function ContactPage() {
                 <p className="mt-6 text-base leading-relaxed text-muted">
                   I want to lead AI education and enablement. LinkedIn is the way to reach me. A contact form is not on this site, because sending mail would need a paid service.
                 </p>
-                <div className="mt-8 flex flex-col items-center gap-4">
+                <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
                   <a
                     href="https://linkedin.com/in/chesman"
                     target="_blank"
@@ -52,10 +53,12 @@ export default function ContactPage() {
                   >
                     LinkedIn
                   </a>
+                  <RecruiterMailButton className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 px-8 py-3 text-xs font-semibold uppercase tracking-widest text-accent transition-all hover:bg-accent hover:text-background hover:border-accent" />
                 </div>
-                <p className="mt-8 text-sm leading-relaxed text-muted">
-                  I only contact recruiters through LinkedIn and this site. A resume is available on request.
-                </p>
+                <RecruiterContactSentence
+                  className="mt-8 text-sm leading-relaxed text-muted"
+                  trailing="A resume is available on request."
+                />
                 <p className="mt-12 flex items-center justify-center gap-1.5 text-xs font-medium uppercase tracking-widest text-muted-subtle">
                   <MapPin className="w-3.5 h-3.5" strokeWidth={1.5} />
                   San Francisco Bay Area

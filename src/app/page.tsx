@@ -6,6 +6,7 @@ import { ScrollHero } from "@/components/animation/ScrollHero";
 import { ScrollStats } from "@/components/animation/ScrollStats";
 import { ScrollPortfolio } from "@/components/animation/ScrollPortfolio";
 import Link from "next/link";
+import { RecruiterContactSentence } from "@/components/contact/RecruiterEmail";
 
 export default function HomePage() {
   return (
@@ -92,9 +93,7 @@ export default function HomePage() {
                 >
                   LinkedIn
                 </a>
-                <p className="mt-6 text-sm text-muted">
-                  I only contact recruiters through LinkedIn and this site.
-                </p>
+                <RecruiterContactSentence className="mt-6 text-sm text-muted" />
               </div>
             </FadeInView>
           </Container>

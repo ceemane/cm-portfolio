@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { RecruiterContactSentence } from "@/components/contact/RecruiterEmail";
 
 export function Footer() {
   return (
@@ -8,9 +9,7 @@ export function Footer() {
           <p className="text-xs leading-relaxed text-muted-subtle">
             &copy; 2026 Chester M. All rights reserved. Work samples shared for hiring review only.
           </p>
-          <p className="text-xs leading-relaxed text-muted-subtle">
-            I only contact recruiters through LinkedIn and this site.
-          </p>
+          <RecruiterContactSentence className="text-xs leading-relaxed text-muted-subtle" />
         </div>
         <Link
           href="https://linkedin.com/in/chesman"
