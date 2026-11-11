@@ -3,34 +3,24 @@ import { getProject } from "@/lib/projects/data";
 import { readFile } from "fs/promises";
 import { join } from "path";
 
+function blobEnvKey(name: string): string {
+  return `PDF_BLOB_${name.replace(/\.pdf$/i, "").replace(/-/g, "_").toUpperCase()}`;
+}
+
 export async function GET(
-  request: NextRequest,
+  _request: NextRequest,
   { params }: { params: Promise<{ slug: string }> }
 ) {
-  // Check session cookie
-  const session = request.cookies.get("cm_session")?.value;
-  if (!session) {
-    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-  }
-
-  const parts = session.split(":");
-  if (parts.length !== 2) {
-    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-  }
-
-  const expiresAt = parseInt(parts[1], 10);
-  if (isNaN(expiresAt) || Date.now() > expiresAt) {
-    return NextResponse.json({ error: "Session expired" }, { status: 401 });
-  }
-
   const { slug } = await params;
   const project = getProject(slug);
   if (!project || !project.pdfFile) {
     return NextResponse.json({ error: "Not found" }, { status: 404 });
   }
 
-  // In production with Vercel Blob, use blob URL from env
-  const blobUrl = process.env[`PDF_BLOB_${slug.replace(/-/g, "_").toUpperCase()}`];
+  const publicName = `${slug}.pdf`;
+  // Keep the existing blob env key, which was created from the stored file name.
+  const blobUrl =
+    process.env[blobEnvKey(project.pdfFile)] || process.env[blobEnvKey(slug)];
 
   if (blobUrl) {
     // Production: proxy from Vercel Blob
@@ -45,8 +35,8 @@ export async function GET(
     return new NextResponse(pdfBuffer, {
       headers: {
         "Content-Type": "application/pdf",
-        "Content-Disposition": `inline; filename="${project.pdfFile}"`,
-        "Cache-Control": "private, max-age=3600",
+        "Content-Disposition": `inline; filename="${publicName}"`,
+        "Cache-Control": "public, max-age=3600",
         "X-Content-Type-Options": "nosniff",
       },
     });
@@ -59,8 +49,8 @@ export async function GET(
     return new NextResponse(pdfBuffer, {
       headers: {
         "Content-Type": "application/pdf",
-        "Content-Disposition": `inline; filename="${project.pdfFile}"`,
-        "Cache-Control": "private, max-age=3600",
+        "Content-Disposition": `inline; filename="${publicName}"`,
+        "Cache-Control": "public, max-age=3600",
         "X-Content-Type-Options": "nosniff",
       },
     });

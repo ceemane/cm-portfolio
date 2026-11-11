@@ -87,7 +87,7 @@ export function ScrollHero() {
         </div>
         <div ref={line2Ref}>
           <h1 className="text-6xl font-semibold tracking-tight text-muted sm:text-8xl lg:text-9xl leading-[0.95]">
-            Manuel
+            M.
           </h1>
         </div>
 
@@ -99,10 +99,12 @@ export function ScrollHero() {
 
         <div ref={ctaRef} className="mt-10 flex items-center gap-6">
           <a
-            href="mailto:chester.manuel@pm.me"
+            href="https://linkedin.com/in/chesman"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-block rounded-full bg-accent px-8 py-3.5 text-xs font-semibold uppercase tracking-[0.2em] text-background transition-all hover:bg-accent-soft"
           >
-            Get in Touch
+            LinkedIn
           </a>
           <Link
             href="/about"

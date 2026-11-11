@@ -7,10 +7,9 @@ import { BookOpen, Bot, Film, Megaphone, BarChart2, Wrench, ExternalLink } from 
 import { AboutIllustration } from "@/components/animation/AboutIllustration";
 
 export const metadata: Metadata = {
-  title: "About | Chester Manuel",
+  title: "About | Chester M.",
   description:
     "I have spent 12 years helping people learn. I now focus on AI education and responsible use.",
-  robots: { index: false, follow: false },
 };
 
 const skillGroups = [
@@ -82,14 +81,10 @@ const skillGroups = [
       "RAG Pipelines",
       "Prompt Engineering & Versioning",
       "AI-Augmented Content Production",
-      "Amazon Bedrock",
-      "Amazon SageMaker",
-      "Amazon Q Developer",
       "Python",
       "SQL",
       "React / Node.js",
       "Claude Code",
-      "Kiro",
       "CloudFormation",
       "IAM",
       "Git / CLI",
@@ -137,17 +132,17 @@ const bios = [
   {
     label: "Background",
     content:
-      "I have spent 12 years in learning and AI enablement. I am a Technical Training Specialist II at AWS, and Content Lead for AWS Jam. I own the Jam content catalog. I am an AWS Certified AI Practitioner. I hold an MS in Instructional Science and Technology and a BS in Computer Science.",
+      "I have spent 12 years in learning and AI enablement. I am a technical training specialist and content lead for a hands-on challenge-based learning catalog. I hold a cloud provider AI practitioner certification. I also hold an MS in Instructional Science and Technology and a BS in Computer Science.",
   },
   {
-    label: "At AWS",
+    label: "Recent work",
     content:
-      "I shipped 12 instructor-led Jam offers as revenue-generating SKUs. I launched a generative AI classroom program. I architected a 23-agent automation fleet. It cut manual work by 99 percent and saved 70 hours a month. I am Lead Content Manager for AWS Tech Summit 2026, across 5 tracks, 12 cities, and three continents. I serve on the AWS Higher Education Tiger Team. I redesigned Professional Services onboarding, from 6 months to 3. I build with Claude, Amazon Bedrock, multi-agent orchestration, RAG, MCP, and Python.",
+      "I own that catalog. I shipped 12 instructor-led offers as revenue-generating SKUs. I launched a generative AI classroom program. I architected a 23-agent automation fleet. It cut manual work by 99 percent and saved 70 hours a month. I was lead content manager for a global technical summit in 2026, across 5 tracks, 12 cities, and three continents. I serve on a higher-education team that brings challenge days into academy courses. I redesigned onboarding for a large professional services group, from 6 months to 3. I build with Claude, multi-agent orchestration, RAG, MCP, and Python.",
   },
   {
-    label: "Before AWS",
+    label: "Earlier work",
     content:
-      "At ServiceNow I architected the Certified Technical Architect program. It generated 1.6 million dollars in annual recurring revenue. The program won the 2022 CEdMA Innovation Award. I also built train-the-trainer programs for alliance partners and pre-sales enablement for release cycles. At Stanford Health Care I designed clinical informatics training. A needs assessment showed the gap was the workflow, so I recommended the process fix.",
+      "At an enterprise software company I architected a flagship technical architect certification. It generated 1.6 million dollars in annual recurring revenue. The program won the 2022 CEdMA Innovation Award. I also built train-the-trainer programs for alliance partners and pre-sales enablement for release cycles. At a leading academic health system I designed clinical informatics training. A needs assessment showed the gap was the workflow, so I recommended the process fix.",
   },
   {
     label: "Where I am headed",

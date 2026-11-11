@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Invalid Link | CM",
+  title: "Portfolio | Chester M.",
+  robots: { index: false, follow: false },
 };
 
 export default function InvalidPage() {
@@ -12,18 +14,17 @@ export default function InvalidPage() {
           CM
         </div>
         <h1 className="mb-3 text-2xl font-semibold text-foreground">
-          Invalid Link
+          The portfolio is public
         </h1>
         <p className="mb-6 text-base leading-relaxed text-muted">
-          This link doesn&apos;t appear to be valid. Please check that you have
-          the correct URL.
+          This link is not a current access code. The portfolio itself is open.
         </p>
-        <a
-          href="mailto:chester.manuel@pm.me?subject=Access%20request%20for%20portfolio&body=Requesting%20access%20to%20Chester%20Manuel%20Portfolio."
+        <Link
+          href="/"
           className="inline-block rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background transition-opacity hover:opacity-80"
         >
-          Contact Chester
-        </a>
+          View the portfolio
+        </Link>
       </div>
     </div>
   );

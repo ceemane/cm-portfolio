@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Access Expired | CM",
+  title: "Portfolio | Chester M.",
+  robots: { index: false, follow: false },
 };
 
 export default function ExpiredPage() {
@@ -12,18 +14,17 @@ export default function ExpiredPage() {
           CM
         </div>
         <h1 className="mb-3 text-2xl font-semibold text-foreground">
-          Access Expired
+          The portfolio is public
         </h1>
         <p className="mb-6 text-base leading-relaxed text-muted">
-          This portfolio link has expired. If you&apos;d like continued access,
-          please reach out to Chester for a new link.
+          This old access link is no longer needed. You can read the work without a code.
         </p>
-        <a
-          href="mailto:chester.manuel@pm.me?subject=Access%20request%20for%20portfolio&body=Requesting%20access%20to%20Chester%20Manuel%20Portfolio."
+        <Link
+          href="/"
           className="inline-block rounded-full bg-foreground px-6 py-3 text-sm font-medium text-background transition-opacity hover:opacity-80"
         >
-          Request Access
-        </a>
+          View the portfolio
+        </Link>
       </div>
     </div>
   );

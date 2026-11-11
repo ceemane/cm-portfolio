@@ -48,11 +48,6 @@ function ProjectCard({
         {project.title}
       </h3>
       <p className="mt-2 text-sm leading-relaxed text-muted">{project.description}</p>
-      {project.disclaimer && (
-        <p className="mt-4 text-[11px] font-medium uppercase tracking-[0.16em] text-muted-subtle">
-          {project.disclaimer}
-        </p>
-      )}
       <span className="mt-5 inline-flex items-center gap-1 text-xs font-medium uppercase tracking-widest text-accent opacity-100 transition-opacity lg:opacity-0 lg:group-hover:opacity-100">
         View project <span aria-hidden="true">&rarr;</span>
       </span>
@@ -116,7 +111,10 @@ export function ScrollPortfolio() {
             Courses, Labs & Enablement
           </h2>
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted">
-            The first two pieces are samples: a first-hour workshop for small businesses, and a kit for community trainers. The rest is work from AWS, ServiceNow, and Stanford.
+            The first two pieces are independent samples: a first-hour workshop for small businesses, and a kit for community trainers. The rest is learning work from cloud, enterprise software, and healthcare settings.
+          </p>
+          <p className="mt-3 max-w-2xl text-sm leading-relaxed text-muted-subtle">
+            ChatGPT is a trademark of OpenAI. These are independent samples, not affiliated with or endorsed by OpenAI.
           </p>
         </div>
 

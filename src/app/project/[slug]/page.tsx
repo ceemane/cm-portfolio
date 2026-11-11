@@ -25,8 +25,7 @@ export async function generateMetadata({
   const project = getProject(slug);
   if (!project) return { title: "Not Found" };
   return {
-    title: `${project.title} | CM`,
-    robots: { index: false, follow: false },
+    title: `${project.title} | Chester M.`,
   };
 }
 
@@ -83,7 +82,7 @@ export default async function ProjectPage({ params }: PageProps) {
               </h1>
               <p className="mt-3 text-base text-muted">{project.subtitle}</p>
               {project.disclaimer && (
-                <p className="mt-5 text-xs font-medium uppercase tracking-[0.18em] text-muted-subtle">
+                <p className="mt-5 max-w-2xl text-sm leading-relaxed text-muted-subtle">
                   {project.disclaimer}
                 </p>
               )}

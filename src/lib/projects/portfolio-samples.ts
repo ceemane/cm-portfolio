@@ -39,7 +39,8 @@ export const portfolioSamples: Project[] = [
       "A 60-minute beginner workshop, with the deck, facilitator guide, and worksheet",
     type: "Training",
     featured: true,
-    disclaimer: "Portfolio sample · Not official OpenAI material",
+    disclaimer:
+      "ChatGPT is a trademark of OpenAI. These are independent samples, not affiliated with or endorsed by OpenAI.",
     description:
       "I designed this hour for small-business owners and staff who are new to ChatGPT. Most of the time is hands-on: people write a real request, improve it, and check it before it reaches a customer.",
     context:
@@ -108,7 +109,8 @@ export const portfolioSamples: Project[] = [
     subtitle: "A path for community trainers who teach first-time AI users",
     type: "Training",
     featured: true,
-    disclaimer: "Portfolio sample · Not official OpenAI material",
+    disclaimer:
+      "ChatGPT is a trademark of OpenAI. These are independent samples, not affiliated with or endorsed by OpenAI.",
     description:
       "I put this together for program leads who prepare community trainers to teach beginner ChatGPT workshops. It shows what ready looks like, how someone gets there, and how an observer makes the call from what they actually see.",
     context:

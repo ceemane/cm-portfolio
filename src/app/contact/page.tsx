@@ -3,11 +3,12 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Container } from "@/components/ui/Container";
 import { FadeInView } from "@/components/animation/FadeInView";
-import { Mail, MapPin } from "lucide-react";
+import { MapPin } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Contact | Chester Manuel",
-  robots: { index: false, follow: false },
+  title: "Contact | Chester M.",
+  description:
+    "Reach Chester M. on LinkedIn. No email address is published on this site.",
 };
 
 export default function ContactPage() {
@@ -40,20 +41,24 @@ export default function ContactPage() {
                   Get in Touch
                 </h1>
                 <p className="mt-6 text-base leading-relaxed text-muted">
-                  I want to lead AI education and enablement. Send a note if that is the work you need.
+                  I want to lead AI education and enablement. LinkedIn is the way to reach me. A contact form is not on this site, because sending mail would need a paid service.
                 </p>
                 <div className="mt-8 flex flex-col items-center gap-4">
                   <a
-                    href="mailto:chester.manuel@pm.me"
+                    href="https://linkedin.com/in/chesman"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 px-8 py-3 text-xs font-semibold uppercase tracking-widest text-accent transition-all hover:bg-accent hover:text-background hover:border-accent"
                   >
-                    <Mail className="w-3.5 h-3.5" strokeWidth={2} />
-                    chester.manuel@pm.me
+                    LinkedIn
                   </a>
                 </div>
+                <p className="mt-8 text-sm leading-relaxed text-muted">
+                  I only contact recruiters through LinkedIn and this site. A resume is available on request.
+                </p>
                 <p className="mt-12 flex items-center justify-center gap-1.5 text-xs font-medium uppercase tracking-widest text-muted-subtle">
                   <MapPin className="w-3.5 h-3.5" strokeWidth={1.5} />
-                  San Francisco, California
+                  San Francisco Bay Area
                 </p>
               </div>
             </FadeInView>
