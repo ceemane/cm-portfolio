@@ -15,9 +15,9 @@ export function Footer() {
           href="https://linkedin.com/in/chesman"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-xs font-medium uppercase tracking-widest text-accent hover:text-accent-soft"
+          className="text-xs font-medium uppercase tracking-widest text-muted hover:text-foreground"
         >
-          LinkedIn
+          View LinkedIn profile
         </Link>
       </div>
     </footer>

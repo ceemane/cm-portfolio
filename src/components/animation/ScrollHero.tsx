@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import Link from "next/link";
+import { RecruiterMailButton } from "@/components/contact/RecruiterEmail";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -97,14 +98,15 @@ export function ScrollHero() {
           </p>
         </div>
 
-        <div ref={ctaRef} className="mt-10 flex items-center gap-6">
+        <div ref={ctaRef} className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-4">
+          <RecruiterMailButton className="inline-block rounded-full bg-accent px-8 py-3.5 text-xs font-semibold uppercase tracking-[0.2em] text-background transition-all hover:bg-accent-soft" />
           <a
             href="https://linkedin.com/in/chesman"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block rounded-full bg-accent px-8 py-3.5 text-xs font-semibold uppercase tracking-[0.2em] text-background transition-all hover:bg-accent-soft"
+            className="text-xs font-medium uppercase tracking-[0.2em] text-muted hover:text-foreground transition-colors"
           >
-            LinkedIn
+            View LinkedIn profile
           </a>
           <Link
             href="/about"

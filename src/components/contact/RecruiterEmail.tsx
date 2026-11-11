@@ -42,7 +42,7 @@ export function RecruiterContactSentence({
 
   return (
     <p className={className}>
-      I only contact recruiters through LinkedIn, this site, or{" "}
+      I only contact recruiters from{" "}
       {address ? (
         <a href={`mailto:${address}`} className="underline decoration-current/40 underline-offset-2 hover:text-accent">
           {address}

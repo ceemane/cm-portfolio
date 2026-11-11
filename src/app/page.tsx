@@ -6,7 +6,7 @@ import { ScrollHero } from "@/components/animation/ScrollHero";
 import { ScrollStats } from "@/components/animation/ScrollStats";
 import { ScrollPortfolio } from "@/components/animation/ScrollPortfolio";
 import Link from "next/link";
-import { RecruiterContactSentence } from "@/components/contact/RecruiterEmail";
+import { RecruiterContactSentence, RecruiterMailButton } from "@/components/contact/RecruiterEmail";
 
 export default function HomePage() {
   return (
@@ -77,7 +77,7 @@ export default function HomePage() {
             <FadeInView>
               <div className="mx-auto max-w-2xl text-center">
                 <p className="mb-4 text-xs font-medium uppercase tracking-[0.3em] text-accent">
-                  Connect
+                  Contact
                 </p>
                 <h2 className="mb-6 text-5xl font-semibold tracking-tight text-foreground sm:text-6xl leading-[1.05]">
                   Let&apos;s Work<br />Together
@@ -85,13 +85,14 @@ export default function HomePage() {
                 <p className="mb-10 text-base text-muted">
                   I want to lead AI education and enablement. If your team needs that, I would like to talk.
                 </p>
+                <RecruiterMailButton className="inline-block rounded-full bg-accent px-10 py-4 text-xs font-semibold uppercase tracking-[0.2em] text-background transition-all hover:bg-accent-soft" />
                 <a
                   href="https://linkedin.com/in/chesman"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block rounded-full border border-accent/40 bg-accent/10 px-10 py-4 text-xs font-semibold uppercase tracking-[0.2em] text-accent transition-all hover:bg-accent hover:text-background hover:border-accent"
+                  className="mt-5 inline-block text-xs font-medium uppercase tracking-[0.2em] text-muted hover:text-foreground"
                 >
-                  LinkedIn
+                  View LinkedIn profile
                 </a>
                 <RecruiterContactSentence className="mt-6 text-sm text-muted" />
               </div>

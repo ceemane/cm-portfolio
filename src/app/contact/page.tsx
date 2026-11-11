@@ -9,7 +9,7 @@ import { RecruiterContactSentence, RecruiterMailButton } from "@/components/cont
 export const metadata: Metadata = {
   title: "Contact | Chester M.",
   description:
-    "Reach Chester M. on LinkedIn, or use the recruiter email on this page.",
+    "Email Chester M. about learning and enablement work. A LinkedIn profile is linked for background.",
 };
 
 export default function ContactPage() {
@@ -36,24 +36,24 @@ export default function ContactPage() {
             <FadeInView>
               <div className="mx-auto max-w-lg text-center">
                 <p className="mb-4 text-xs font-medium uppercase tracking-[0.25em] text-accent">
-                  Connect
+                  Contact
                 </p>
                 <h1 className="text-4xl font-semibold tracking-tight text-foreground sm:text-6xl leading-[1.05]">
                   Get in Touch
                 </h1>
                 <p className="mt-6 text-base leading-relaxed text-muted">
-                  I want to lead AI education and enablement. LinkedIn is the way to reach me. A contact form is not on this site, because sending mail would need a paid service.
+                  I want to lead AI education and enablement. Email is how recruiters can write to me. A contact form is not on this site, because sending mail would need a paid service.
                 </p>
-                <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+                <div className="mt-8 flex flex-col items-center justify-center gap-4">
+                  <RecruiterMailButton className="inline-flex items-center gap-2 rounded-full bg-accent px-8 py-3.5 text-xs font-semibold uppercase tracking-[0.2em] text-background transition-all hover:bg-accent-soft" />
                   <a
                     href="https://linkedin.com/in/chesman"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 px-8 py-3 text-xs font-semibold uppercase tracking-widest text-accent transition-all hover:bg-accent hover:text-background hover:border-accent"
+                    className="text-xs font-medium uppercase tracking-[0.2em] text-muted hover:text-foreground"
                   >
-                    LinkedIn
+                    View LinkedIn profile
                   </a>
-                  <RecruiterMailButton className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 px-8 py-3 text-xs font-semibold uppercase tracking-widest text-accent transition-all hover:bg-accent hover:text-background hover:border-accent" />
                 </div>
                 <RecruiterContactSentence
                   className="mt-8 text-sm leading-relaxed text-muted"
