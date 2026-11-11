@@ -125,19 +125,17 @@ export default function HomePage() {
                     Background
                   </p>
                   <h2 className="text-4xl font-semibold tracking-tight text-foreground sm:text-5xl leading-[1.05]">
-                    12+ Years of<br />Learning<br />Engineering
+                    12 years<br />helping people<br />learn AI
                   </h2>
                 </div>
                 <div className="space-y-6">
                   <p className="text-base leading-relaxed text-muted">
-                    Across Stanford, ServiceNow, and AWS, I&apos;ve spent my career
-                    building the enablement systems that help technical audiences
-                    adopt complex products and capabilities with confidence.
+                    I am a Technical Training Specialist II at AWS, and Content Lead for AWS Jam.
+                    I own the Jam catalog. I shipped 12 instructor-led offers and launched a generative AI classroom.
                   </p>
                   <p className="text-base leading-relaxed text-muted">
-                    My work connects GTM enablement, customer education, AI,
-                    and training content into practical systems that support
-                    real-world performance.
+                    Before that I built the Certified Technical Architect program at ServiceNow and taught clinical staff at Stanford Health Care.
+                    I want to lead AI education so people at every skill level can use it well and responsibly.
                   </p>
                   <Link
                     href="/about"
@@ -170,7 +168,7 @@ export default function HomePage() {
                   Let&apos;s Work<br />Together
                 </h2>
                 <p className="mb-10 text-base text-muted">
-                  Interested in discussing how I can bring this approach to your team?
+                  I want to lead AI education and enablement. If your team needs that, I would like to talk.
                 </p>
                 <a
                   href="mailto:chester.manuel@pm.me"

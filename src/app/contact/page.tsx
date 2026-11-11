@@ -40,7 +40,7 @@ export default function ContactPage() {
                   Get in Touch
                 </h1>
                 <p className="mt-6 text-base leading-relaxed text-muted">
-                  Interested in my work or want to connect? Send me an email.
+                  I want to lead AI education and enablement. Send a note if that is the work you need.
                 </p>
                 <div className="mt-8 flex flex-col items-center gap-4">
                   <a

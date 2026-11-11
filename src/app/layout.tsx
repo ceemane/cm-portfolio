@@ -9,10 +9,17 @@ const inter = Inter({
   display: "swap",
 });
 
+const siteTitle = "Chester Manuel | AI education and enablement";
+const siteDescription =
+  "I help people and teams learn to use AI well and responsibly. The work spans 12 years of workshops, credentials, and field readiness.";
+
 export const metadata: Metadata = {
-  title: "Chester Manuel | Learning, Engineered.",
-  description:
-    "Portfolio of GTM enablement, customer education, AI enablement, and training systems architecture work.",
+  title: siteTitle,
+  description: siteDescription,
+  openGraph: {
+    title: siteTitle,
+    description: siteDescription,
+  },
   robots: {
     index: false,
     follow: false,

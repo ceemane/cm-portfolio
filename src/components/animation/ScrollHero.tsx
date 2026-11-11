@@ -18,13 +18,13 @@ export function ScrollHero() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Initial state — everything hidden
+      // Initial state: everything hidden
       gsap.set([labelRef.current, line1Ref.current, line2Ref.current, bioRef.current, ctaRef.current], {
         opacity: 0,
         y: 40,
       });
 
-      // Entrance timeline — plays on load
+      // Entrance timeline plays on load
       const intro = gsap.timeline({ delay: 0.2 });
       intro
         .to(labelRef.current, { opacity: 1, y: 0, duration: 0.7, ease: "power2.out" })
@@ -77,7 +77,7 @@ export function ScrollHero() {
 
       <div className="relative z-10 w-full mx-auto max-w-5xl px-6 py-24 sm:py-32">
         <p ref={labelRef} className="mb-8 text-xs font-medium uppercase tracking-[0.3em] text-accent">
-          GTM Enablement · Customer Education · AI Systems
+          AI education · Every skill level · Responsible use
         </p>
 
         <div ref={line1Ref}>
@@ -93,9 +93,7 @@ export function ScrollHero() {
 
         <div ref={bioRef} className="mt-12 max-w-lg border-l-2 border-accent/30 pl-6">
           <p className="text-base leading-relaxed text-muted">
-            Training content and systems architect with 12+ years across Stanford,
-            ServiceNow, and AWS. I design customer education, GTM enablement, and
-            Claude-based AI systems for technical audiences.
+            I have spent 12 years helping people learn technical skills, now focused on using AI well and responsibly. The samples below are a first-hour workshop and a trainer kit.
           </p>
         </div>
 

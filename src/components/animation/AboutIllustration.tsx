@@ -57,13 +57,13 @@ export function AboutIllustration() {
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         role="img"
-        aria-label="Hub diagram connecting Learner, Content, AI Agent, and Credential to the L&D practice hub"
+        aria-label="Hub diagram connecting Learner, Content, AI Agent, and Credential"
         className="w-full max-w-xs sm:max-w-sm md:max-w-md"
       >
         {/* Ambient glow */}
         <ellipse className="glow" cx={CX} cy={CY} rx="110" ry="85" fill="rgba(245,200,66,0.07)" />
 
-        {/* Spokes — drawn before nodes so circles mask the ends */}
+        {/* Spokes are drawn before nodes so circles mask the ends */}
         <line className="spoke" x1={CX} y1={CY} x2={CX}      y2={CY - SR}
           stroke="#f5c842" strokeWidth="1.5" strokeOpacity="0.4"
           strokeDasharray={SR} strokeDashoffset={SR} />
@@ -101,7 +101,7 @@ export function AboutIllustration() {
         <text className="lbl" x={CX} y={CY - SR - NR - 18}
           textAnchor="middle" fontSize="14" fill="#f0faf7" fontFamily="system-ui" fontWeight="600">Learner</text>
         <text className="lbl" x={CX} y={CY - SR - NR - 3}
-          textAnchor="middle" fontSize="12" fill="#7aa89f" fontFamily="system-ui">Customer education</text>
+          textAnchor="middle" fontSize="12" fill="#7aa89f" fontFamily="system-ui">All skill levels</text>
 
         {/* ── RIGHT: Credential (320, 250) ─────────────── */}
         <g className="outer-node">
@@ -118,7 +118,7 @@ export function AboutIllustration() {
         <text className="lbl" x={CX + SR} y={CY + NR + 22}
           textAnchor="middle" fontSize="14" fill="#f0faf7" fontFamily="system-ui" fontWeight="600">Credential</text>
         <text className="lbl" x={CX + SR} y={CY + NR + 39}
-          textAnchor="middle" fontSize="12" fill="#7aa89f" fontFamily="system-ui">GTM readiness</text>
+          textAnchor="middle" fontSize="12" fill="#7aa89f" fontFamily="system-ui">Field readiness</text>
 
         {/* ── BOTTOM: AI Agent (200, 370) ──────────────── */}
         <g className="outer-node">
@@ -138,7 +138,7 @@ export function AboutIllustration() {
         <text className="lbl" x={CX} y={CY + SR + NR + 22}
           textAnchor="middle" fontSize="14" fill="#f0faf7" fontFamily="system-ui" fontWeight="600">AI Agent</text>
         <text className="lbl" x={CX} y={CY + SR + NR + 39}
-          textAnchor="middle" fontSize="12" fill="#7aa89f" fontFamily="system-ui">AI enablement</text>
+          textAnchor="middle" fontSize="12" fill="#7aa89f" fontFamily="system-ui">Responsible use</text>
 
         {/* ── LEFT: Content (80, 250) ──────────────────── */}
         <g className="outer-node">
@@ -156,7 +156,7 @@ export function AboutIllustration() {
         <text className="lbl" x={CX - SR} y={CY + NR + 22}
           textAnchor="middle" fontSize="14" fill="#f0faf7" fontFamily="system-ui" fontWeight="600">Content</text>
         <text className="lbl" x={CX - SR} y={CY + NR + 39}
-          textAnchor="middle" fontSize="12" fill="#7aa89f" fontFamily="system-ui">Training content</text>
+          textAnchor="middle" fontSize="12" fill="#7aa89f" fontFamily="system-ui">Workshops</text>
       </svg>
     </div>
   );

@@ -8,6 +8,8 @@ import { AboutIllustration } from "@/components/animation/AboutIllustration";
 
 export const metadata: Metadata = {
   title: "About | Chester Manuel",
+  description:
+    "I have spent 12 years helping people learn. I now focus on AI education and responsible use.",
   robots: { index: false, follow: false },
 };
 
@@ -135,22 +137,22 @@ const bios = [
   {
     label: "Background",
     content:
-      "I am a technical curriculum developer and training systems architect with 12+ years across Stanford, ServiceNow, and AWS. I design the courses, labs, demos, presentations, and operating systems that help technical audiences adopt complex products. My work combines instructional rigor with hands-on technical practice, from customer education and technical onboarding to field enablement and release-ready learning content. I hold an MS in Instructional Science and Technology, a BS in Computer Science, and am an AWS Certified AI Practitioner.",
+      "I have spent 12 years in learning and AI enablement. I am a Technical Training Specialist II at AWS, and Content Lead for AWS Jam. I own the Jam content catalog. I am an AWS Certified AI Practitioner. I hold an MS in Instructional Science and Technology and a BS in Computer Science.",
   },
   {
-    label: "GTM Enablement & Customer Education",
+    label: "At AWS",
     content:
-      "I build enablement programs around the way technical teams actually learn and work. That means curating source material into reusable curriculum, designing labs and demos that hold up in live delivery, partnering with program owners and product marketing on priorities, and keeping content current as products change. My work spans customer education, technical onboarding, pre-sales enablement, certification, and field-ready learning assets.",
+      "I shipped 12 instructor-led Jam offers as revenue-generating SKUs. I launched a generative AI classroom program. I architected a 23-agent automation fleet. It cut manual work by 99 percent and saved 70 hours a month. I am Lead Content Manager for AWS Tech Summit 2026, across 5 tracks, 12 cities, and three continents. I serve on the AWS Higher Education Tiger Team. I redesigned Professional Services onboarding, from 6 months to 3. I build with Claude, Amazon Bedrock, multi-agent orchestration, RAG, MCP, and Python.",
   },
   {
-    label: "Philosophy",
+    label: "Before AWS",
     content:
-      "Great instructional design is invisible. When it works, learners feel capable, not taught. I've twice diagnosed what looked like a training problem as a workflow problem instead, at Stanford Health Care and at AWS, and delivered the process fix rather than a course nobody needed. I combine evidence-based learning science with systems thinking to create experiences that are clear, engaging, and measurable. Every design decision should trace back to a learning objective, and every objective should trace forward to real-world performance.",
+      "At ServiceNow I architected the Certified Technical Architect program. It generated 1.6 million dollars in annual recurring revenue. The program won the 2022 CEdMA Innovation Award. I also built train-the-trainer programs for alliance partners and pre-sales enablement for release cycles. At Stanford Health Care I designed clinical informatics training. A needs assessment showed the gap was the workflow, so I recommended the process fix.",
   },
   {
-    label: "AI & Automation",
+    label: "Where I am headed",
     content:
-      "I build AI-enabled content operations systems, not just AI-assisted drafts. My work includes multi-agent orchestration, Claude-based workflows, MCP servers, structured LLM evaluation, RAG knowledge tools, and automation for curriculum lifecycle management. I design for human review, reliable outputs, traceable sources, and maintainable handoff so AI accelerates technical content without reducing its quality.",
+      "I want to lead learning and instruction at an AI company. That means literacy and academy programs, partner and field readiness, and credentials people can trust. I help people and teams of every skill level learn to use AI well and responsibly, at scale. The workshop and trainer kit on this site are samples of that work. I am committed to the responsible and ethical advancement of AI.",
   },
 ];
 
@@ -181,7 +183,7 @@ export default function AboutPage() {
                 About
               </p>
               <h1 className="text-4xl font-semibold tracking-tight text-foreground sm:text-6xl leading-[1.05]">
-                Learning,<br />Engineered.
+                Helping people<br />learn AI well.
               </h1>
             </FadeInView>
           </Container>
@@ -213,7 +215,7 @@ export default function AboutPage() {
                 Practice
               </p>
               <p className="mb-8 text-sm text-muted max-w-xs">
-                The four pillars that define my work.
+                Four parts of how I teach AI.
               </p>
               <AboutIllustration />
             </FadeInView>
@@ -272,10 +274,10 @@ export default function AboutPage() {
                 >
                   <div>
                     <p className="text-sm font-medium text-foreground group-hover:text-accent transition-colors leading-snug">
-                      Tabimina Balintawak — Bay Area
+                      Filipino martial arts, Bay Area
                     </p>
                     <p className="mt-2 text-xs leading-relaxed text-muted">
-                      I train and teach Tabimina Balintawak, a modern style of Arnis developed in the 1950s by Anciong Bacon and passed down through his direct student Bob &quot;Silver&quot; Tabimina. Teaching outside of work keeps my instructional instincts sharp — breaking down complex movement patterns for beginners is not that different from making technical concepts stick.
+                      I designed the curriculum and teach a weekly class of adults and children. They learn a physical skill from zero, with no platform and no completion score. They are ready when they can perform under pressure.
                     </p>
                   </div>
                   <ExternalLink className="mt-0.5 w-4 h-4 flex-shrink-0 text-muted group-hover:text-accent transition-colors" strokeWidth={1.5} />

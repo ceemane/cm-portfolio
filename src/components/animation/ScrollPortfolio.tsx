@@ -116,8 +116,7 @@ export function ScrollPortfolio() {
             Courses, Labs & Enablement
           </h2>
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-muted">
-            Selected work in AI-enabled content operations, hands-on technical learning,
-            customer education, and GTM enablement.
+            The first two pieces are samples: a first-hour workshop for small businesses, and a kit for community trainers. The rest is work from AWS, ServiceNow, and Stanford.
           </p>
         </div>
 
