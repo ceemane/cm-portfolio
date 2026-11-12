@@ -41,7 +41,7 @@ export function Header() {
               CM
             </text>
           </svg>
-          <span className="hidden sm:inline">Chester Manuel</span>
+          <span className="hidden sm:inline">Chester M.</span>
         </Link>
 
         <ul className="flex items-center gap-7">

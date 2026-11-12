@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import Link from "next/link";
+import { RecruiterMailButton } from "@/components/contact/RecruiterEmail";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -18,13 +19,13 @@ export function ScrollHero() {
 
   useEffect(() => {
     const ctx = gsap.context(() => {
-      // Initial state — everything hidden
+      // Initial state: everything hidden
       gsap.set([labelRef.current, line1Ref.current, line2Ref.current, bioRef.current, ctaRef.current], {
         opacity: 0,
         y: 40,
       });
 
-      // Entrance timeline — plays on load
+      // Entrance timeline plays on load
       const intro = gsap.timeline({ delay: 0.2 });
       intro
         .to(labelRef.current, { opacity: 1, y: 0, duration: 0.7, ease: "power2.out" })
@@ -77,7 +78,7 @@ export function ScrollHero() {
 
       <div className="relative z-10 w-full mx-auto max-w-5xl px-6 py-24 sm:py-32">
         <p ref={labelRef} className="mb-8 text-xs font-medium uppercase tracking-[0.3em] text-accent">
-          GTM Enablement · Customer Education · AI Systems
+          AI education · Every skill level · Responsible use
         </p>
 
         <div ref={line1Ref}>
@@ -87,24 +88,25 @@ export function ScrollHero() {
         </div>
         <div ref={line2Ref}>
           <h1 className="text-6xl font-semibold tracking-tight text-muted sm:text-8xl lg:text-9xl leading-[0.95]">
-            Manuel
+            M.
           </h1>
         </div>
 
         <div ref={bioRef} className="mt-12 max-w-lg border-l-2 border-accent/30 pl-6">
           <p className="text-base leading-relaxed text-muted">
-            Training content and systems architect with 12+ years across Stanford,
-            ServiceNow, and AWS. I design customer education, GTM enablement, and
-            Claude-based AI systems for technical audiences.
+            I have spent 12 years helping people learn technical skills, now focused on using AI well and responsibly. The samples below are a first-hour workshop and a trainer kit.
           </p>
         </div>
 
-        <div ref={ctaRef} className="mt-10 flex items-center gap-6">
+        <div ref={ctaRef} className="mt-10 flex flex-wrap items-center gap-x-6 gap-y-4">
+          <RecruiterMailButton className="inline-block rounded-full bg-accent px-8 py-3.5 text-xs font-semibold uppercase tracking-[0.2em] text-background transition-all hover:bg-accent-soft" />
           <a
-            href="mailto:chester.manuel@pm.me"
-            className="inline-block rounded-full bg-accent px-8 py-3.5 text-xs font-semibold uppercase tracking-[0.2em] text-background transition-all hover:bg-accent-soft"
+            href="https://linkedin.com/in/chesman"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs font-medium uppercase tracking-[0.2em] text-muted hover:text-foreground transition-colors"
           >
-            Get in Touch
+            View LinkedIn profile
           </a>
           <Link
             href="/about"

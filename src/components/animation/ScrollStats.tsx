@@ -8,10 +8,10 @@ import { Bot, GraduationCap, Megaphone, Workflow } from "lucide-react";
 gsap.registerPlugin(ScrollTrigger);
 
 const focusAreas = [
-  { label: "GTM Enablement", detail: "Field-ready learning", icon: Megaphone },
-  { label: "Customer Education", detail: "Technical learning journeys", icon: GraduationCap },
-  { label: "AI Enablement", detail: "Human-centered automation", icon: Bot },
-  { label: "Systems Architecture", detail: "Content operations at scale", icon: Workflow },
+  { label: "AI literacy", detail: "Every skill level", icon: Bot },
+  { label: "Instruction", detail: "Workshops and paths", icon: GraduationCap },
+  { label: "Field readiness", detail: "Partners and teams", icon: Megaphone },
+  { label: "Credentials", detail: "Design and assessment", icon: Workflow },
 ];
 
 export function ScrollStats() {

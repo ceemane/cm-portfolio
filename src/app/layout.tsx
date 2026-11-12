@@ -9,14 +9,23 @@ const inter = Inter({
   display: "swap",
 });
 
+const siteTitle = "Chester M. | AI Learning and Enablement Leader";
+const siteDescription =
+  "I help people and teams of every skill level learn to use AI well and responsibly. This site shows workshops, credentials, and field readiness from 12 years of learning work.";
+
 export const metadata: Metadata = {
-  title: "Chester Manuel | Learning, Engineered.",
-  description:
-    "Portfolio of GTM enablement, customer education, AI enablement, and training systems architecture work.",
+  metadataBase: new URL("https://www.cmlearn.tech"),
+  title: siteTitle,
+  description: siteDescription,
+  openGraph: {
+    title: siteTitle,
+    description: siteDescription,
+    type: "website",
+    url: "https://www.cmlearn.tech",
+  },
   robots: {
-    index: false,
-    follow: false,
-    googleBot: { index: false, follow: false },
+    index: true,
+    follow: true,
   },
 };
 

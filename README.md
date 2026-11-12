@@ -20,6 +20,66 @@ The production deployment pings Upstash every Monday at 12:00 UTC. After
 deploying, set `CRON_SECRET` in Vercel's Production environment and confirm the
 job is enabled under **Settings → Cron Jobs**.
 
+## Replacing portfolio samples
+
+The ChatGPT workshop and the Community Trainer Readiness Kit are portfolio samples. Chester can replace them later without hunting through the site.
+
+Two places matter:
+
+- **Files and preview images:** `public/portfolio-samples/`. One folder. Filenames stay the same, with no version numbers, dates, or hashes.
+- **The words and the links:** `src/lib/projects/portfolio-samples.ts`. That file is the only config for these entries. It is spread into `src/lib/projects/data.ts`, so you do not edit `data.ts` to swap or add a sample.
+
+Keep the line `Portfolio sample · Not official OpenAI material` on these entries. Do not add OpenAI logos.
+
+### Replace a deck, guide, worksheet, or kit
+
+1. Export the new PDF or PowerPoint.
+2. Put it in `public/portfolio-samples/`.
+3. Use the filename already there. Overwrite the file. Do not rename it.
+4. Commit and deploy. View and download links already point at that name.
+
+| Piece | Filename |
+| --- | --- |
+| Workshop deck | `chatgpt-for-small-business-workshop-deck.pptx` |
+| Facilitator guide | `chatgpt-for-small-business-facilitator-guide.pdf` |
+| Participant worksheet | `chatgpt-for-small-business-participant-worksheet.pdf` |
+| Trainer readiness kit | `community-trainer-readiness-kit.pdf` |
+
+### Replace a preview image
+
+Same folder, same rule: overwrite the `.webp` and keep the filename. Slides are about 1400 pixels wide. Page covers are about 1000 pixels wide. Export as WebP.
+
+The first image in a project's `images` list is the picture on the homepage card.
+
+| Preview | Filename |
+| --- | --- |
+| Workshop title slide | `chatgpt-for-small-business-title.webp` |
+| Jam rubric slide | `chatgpt-for-small-business-jam-rubric.webp` |
+| Facilitator guide cover | `chatgpt-for-small-business-facilitator-cover.webp` |
+| Worksheet rubric | `chatgpt-for-small-business-worksheet-rubric.webp` |
+| Kit cover | `community-trainer-readiness-kit-cover.webp` |
+| Kit rubric | `community-trainer-readiness-kit-rubric.webp` |
+
+If the new image has a different pixel size, update `width` and `height` on that `preview(...)` call in `portfolio-samples.ts`.
+
+### Change the description
+
+Edit the matching object in `src/lib/projects/portfolio-samples.ts`.
+
+- `description` is the short text on the homepage card.
+- `context`, `role`, `challenge`, `approach`, and `impact` are the project page.
+- Leave `disclaimer` as `Portfolio sample · Not official OpenAI material`.
+
+### Add a file to an existing sample
+
+1. Drop the file in `public/portfolio-samples/` with a new lowercase hyphenated name, and no version number. Example: `chatgpt-for-small-business-handout.pdf`.
+2. In `portfolio-samples.ts`, add a `downloadable(...)` call to that project's `files` array. The first argument is the filename. Pass `true` as the last argument for a PDF so the page can show it. Leave that off for a PowerPoint file.
+3. To show a preview, add a `preview(...)` call to `images` with the filename, alt text, width, and height.
+
+### Add a new sample project
+
+Add another object to the `portfolioSamples` array in `portfolio-samples.ts`, with the same fields as the entries already there. Put its files and previews in `public/portfolio-samples/`. Set `featured: true` to lead the homepage grid. The `slug` is the URL: `/project/your-slug`.
+
 ## Getting Started
 
 First, run the development server:

@@ -3,11 +3,13 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Container } from "@/components/ui/Container";
 import { FadeInView } from "@/components/animation/FadeInView";
-import { Mail, MapPin } from "lucide-react";
+import { MapPin } from "lucide-react";
+import { RecruiterContactSentence, RecruiterMailButton } from "@/components/contact/RecruiterEmail";
 
 export const metadata: Metadata = {
-  title: "Contact | Chester Manuel",
-  robots: { index: false, follow: false },
+  title: "Contact | Chester M.",
+  description:
+    "Email Chester M. about learning and enablement work. A LinkedIn profile is linked for background.",
 };
 
 export default function ContactPage() {
@@ -34,26 +36,32 @@ export default function ContactPage() {
             <FadeInView>
               <div className="mx-auto max-w-lg text-center">
                 <p className="mb-4 text-xs font-medium uppercase tracking-[0.25em] text-accent">
-                  Connect
+                  Contact
                 </p>
                 <h1 className="text-4xl font-semibold tracking-tight text-foreground sm:text-6xl leading-[1.05]">
                   Get in Touch
                 </h1>
                 <p className="mt-6 text-base leading-relaxed text-muted">
-                  Interested in my work or want to connect? Send me an email.
+                  I want to lead AI education and enablement. Email is how recruiters can write to me. A contact form is not on this site, because sending mail would need a paid service.
                 </p>
-                <div className="mt-8 flex flex-col items-center gap-4">
+                <div className="mt-8 flex flex-col items-center justify-center gap-4">
+                  <RecruiterMailButton className="inline-flex items-center gap-2 rounded-full bg-accent px-8 py-3.5 text-xs font-semibold uppercase tracking-[0.2em] text-background transition-all hover:bg-accent-soft" />
                   <a
-                    href="mailto:chester.manuel@pm.me"
-                    className="inline-flex items-center gap-2 rounded-full border border-accent/40 bg-accent/10 px-8 py-3 text-xs font-semibold uppercase tracking-widest text-accent transition-all hover:bg-accent hover:text-background hover:border-accent"
+                    href="https://linkedin.com/in/chesman"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs font-medium uppercase tracking-[0.2em] text-muted hover:text-foreground"
                   >
-                    <Mail className="w-3.5 h-3.5" strokeWidth={2} />
-                    chester.manuel@pm.me
+                    View LinkedIn profile
                   </a>
                 </div>
+                <RecruiterContactSentence
+                  className="mt-8 text-sm leading-relaxed text-muted"
+                  trailing="A resume is available on request."
+                />
                 <p className="mt-12 flex items-center justify-center gap-1.5 text-xs font-medium uppercase tracking-widest text-muted-subtle">
                   <MapPin className="w-3.5 h-3.5" strokeWidth={1.5} />
-                  San Francisco, California
+                  San Francisco Bay Area
                 </p>
               </div>
             </FadeInView>

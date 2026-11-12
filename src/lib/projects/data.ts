@@ -1,3 +1,21 @@
+import { portfolioSamples } from "./portfolio-samples";
+
+export interface ProjectImage {
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+}
+
+export interface ProjectFile {
+  label: string;
+  description: string;
+  href: string;
+  downloadName: string;
+  /** PDFs can open in the page. Decks are download-only. */
+  viewable?: boolean;
+}
+
 export interface Project {
   slug: string;
   title: string;
@@ -10,12 +28,16 @@ export interface Project {
   approach: string;
   impact: string[];
   pdfFile?: string; // filename in content/pdfs or Vercel Blob key
-  externalUrl?: string; // link to live artifact (e.g. AWS Skill Builder)
+  externalUrl?: string;
   videoUrl?: string; // direct video URL (Vercel Blob)
-  images?: { src: string; alt: string }[]; // screenshots in public/images/
+  images?: ProjectImage[]; // screenshots in public/
+  files?: ProjectFile[];
+  disclaimer?: string;
+  featured?: boolean;
 }
 
 export const projects: Project[] = [
+  ...portfolioSamples,
   {
     slug: "ai-content-operations-system",
     title: "AI Content Operations System",
@@ -60,13 +82,13 @@ export const projects: Project[] = [
   },
   {
     slug: "ml-engineer-learning-plan",
-    title: "AWS ML Engineer Associate Learning Plan",
+    title: "Machine Learning Engineer Learning Plan",
     subtitle: "13-course certification learning path with hands-on labs",
     type: "Learning Plan",
     description:
-      "End-to-end learning plan for the AWS Machine Learning Engineer Associate certification, spanning 13 courses across eLearning, video, self-paced labs, and knowledge checks.",
+      "End-to-end learning plan for a machine learning engineer certification, spanning 13 courses across eLearning, video, self-paced labs, and knowledge checks.",
     context:
-      "AWS needed a structured, comprehensive learning path to prepare engineers for the ML Engineer Associate certification. No unified plan existed that connected all the required domains into a cohesive learner journey.",
+      "A global cloud provider needed a structured learning path to prepare engineers for a machine learning certification. No single plan connected the required domains.",
     role: "Co-lead Instructional Designer: co-led curriculum architecture, course sequencing, lab integration, and assessment alignment across all 13 courses in the learning plan.",
     challenge:
       "Design a learning plan that takes engineers from foundational ML concepts through production-ready skills across data engineering, model development, deployment, and monitoring, all mapped to certification exam objectives.",
@@ -75,15 +97,14 @@ export const projects: Project[] = [
     impact: [
       "Official certification-preparation learning path for machine learning practitioners",
       "Covers the full exam blueprint across data engineering, model development, deployment, and monitoring",
-      "Integrated hands-on labs provide practical experience with SageMaker, Bedrock, and other ML services",
+      "Integrated hands-on labs give practice with managed training and foundation-model services",
       "Scaffolded design reduces learner drop-off across multi-week study plans",
     ],
-    externalUrl: "https://skillbuilder.aws/learning-plan/AY5A6VN52B/aws-ml-engineer-associate-learning-plan-includes-labs/C21UPEK6R9",
   },
   {
-    slug: "aws-jam-user-guide",
+    slug: "hands-on-challenge-catalog",
     title: "Hands-On Technical Enablement Platform",
-    subtitle: "Game-based group learning platform serving AWS customers, partners, and internal teams across cloud domains",
+    subtitle: "Game-based group learning for customers, partners, and internal teams across cloud domains",
     type: "Training",
     description:
       "Content strategy and curriculum operations for a gamified, scenario-based platform used by customers, partners, and internal teams to build practical cloud skills across AI, security, DevOps, and infrastructure domains.",
@@ -95,57 +116,56 @@ export const projects: Project[] = [
     approach:
       "Created reusable design and review practices for hands-on learning across instructor-led, self-paced, and group-based experiences. Built cloud labs, partnered with customer-facing teams to map skill gaps to learning journeys, and introduced AI-assisted workflows for proposal intake, review, security checks, and content readiness. Kept documentation, facilitator guidance, and maintenance practices aligned as products and services evolved.",
     impact: [
-      "Directed multi-modal training design combining ILT, self-paced eLearning, and group-based gamified Jam learning programs",
+      "Directed multi-modal training design combining instructor-led, self-paced, and group-based challenge programs",
       "Built hands-on labs and security review practices for a broad cloud curriculum",
-      "Advised and designed Jam-based learning programs for Professional Services customers across FSI, Healthcare, and Automotive verticals",
+      "Designed challenge-based programs for professional services customers in finance, healthcare, and automotive",
       "Established a creator enablement and quality-review practice for distributed technical contributors",
       "Curated live learning experiences across AI, security, and DevOps for technical audiences",
       "Applied multi-agent AI workflows to curriculum lifecycle management",
       "Created automation and monitoring patterns that make content operations more reliable",
     ],
     pdfFile: "aws-jam-user-guide.pdf",
-    externalUrl: "https://jam.aws.com/",
   },
   {
     slug: "ml-engineer-modeling-approach",
     title: "ML Engineer Associate: Choose a Modeling Approach",
-    subtitle: "Articulate Rise eLearning module, AWS Certification prep (2.1)",
+    subtitle: "Articulate Rise eLearning module, machine learning certification prep (2.1)",
     type: "Course",
     description:
-      "Interactive Articulate Rise eLearning module preparing learners to select appropriate ML modeling approaches, covering supervised/unsupervised learning, model selection criteria, and AWS SageMaker integration.",
+      "Interactive Articulate Rise module on how to choose a modeling approach, including supervised and unsupervised learning and a managed training service.",
     context:
-      "Part of the AWS Machine Learning Engineer Associate certification preparation curriculum. Learners needed structured guidance on model selection: a notoriously abstract topic.",
+      "Part of a machine learning engineer certification path. Learners needed structured guidance on model selection, which is an abstract topic.",
     role: "Instructional Designer: designed learning objectives, content structure, scenario-based assessments, and visual aids. Built the full course in Articulate Rise.",
     challenge:
       "Make abstract ML model selection concepts concrete and actionable in an interactive eLearning format for engineers with limited ML background.",
     approach:
-      "Built in Articulate Rise with decision-tree frameworks, scenario-based knowledge checks, and interactive visual aids. Created real AWS service examples to ground abstract concepts. Aligned all content to exam objectives.",
+      "Built in Articulate Rise with decision-tree frameworks, scenario-based knowledge checks, and interactive visual aids. Used real cloud service examples to ground abstract concepts. Aligned all content to exam objectives.",
     impact: [
       "Core interactive module in a machine learning certification-preparation path",
       "Core Rise-built module in the ML Engineer Associate certification prep path",
       "Decision-tree framework adopted by learners as a practical job aid",
       "Scenario-based assessments reinforced application over memorization",
-      "Bridged the gap between theoretical ML concepts and AWS service implementation",
+      "Bridged theoretical machine learning concepts and cloud service implementation",
     ],
     pdfFile: "aws-ml-engineer-associate-2-1-choose-a-modeling-approach.pdf",
   },
   {
     slug: "ml-engineer-train-models",
     title: "ML Engineer Associate: Train Models",
-    subtitle: "Articulate Rise eLearning module, AWS Certification prep (2.2)",
+    subtitle: "Articulate Rise eLearning module, machine learning certification prep (2.2)",
     type: "Course",
     description:
-      "Interactive Articulate Rise eLearning module on model training workflows including data preparation, hyperparameter tuning, SageMaker training jobs, and evaluation metrics.",
+      "Interactive Articulate Rise module on model training, including data preparation, hyperparameter tuning, managed training jobs, and evaluation metrics.",
     context:
-      "Sequential follow-up to the modeling approach module. Learners needed hands-on training guidance aligned with both certification objectives and real-world AWS workflows.",
+      "Sequential follow-up to the modeling approach module. Learners needed training guidance aligned to certification objectives and real cloud workflows.",
     role: "Instructional Designer: designed end-to-end learning experience including interactive Rise modules, labs, knowledge checks, and visual process flows.",
     challenge:
-      "Balance certification exam coverage with practical training skills in an engaging eLearning format. Many learners had never run a training job in SageMaker.",
+      "Balance certification exam coverage with practical training skills in an engaging eLearning format. Many learners had never run a training job.",
     approach:
-      "Built in Articulate Rise with a scaffolded progression from basic training concepts to complex multi-model tuning scenarios. Used annotated SageMaker console walkthroughs and interactive knowledge checks to reduce cognitive load.",
+      "Built in Articulate Rise with a scaffolded progression from basic training concepts to complex multi-model tuning. Used annotated console walkthroughs and knowledge checks to reduce cognitive load.",
     impact: [
       "Hands-on module in a machine learning certification-preparation path",
-      "Rise-built module enabling learners to configure and run SageMaker training jobs independently",
+      "Rise-built module that lets learners configure and run managed training jobs on their own",
       "Scaffolded eLearning design reduced drop-off in the certification prep pipeline",
       "Interactive knowledge checks reinforced learning at each stage",
       "Integrated with hands-on labs for experiential learning reinforcement",
@@ -154,21 +174,21 @@ export const projects: Project[] = [
   },
   {
     slug: "analytics-fundamentals-part-1",
-    title: "Fundamentals of Analytics on AWS: Part 1",
-    subtitle: "Articulate Rise eLearning — foundation course on AWS analytics services",
+    title: "Fundamentals of Analytics: Part 1",
+    subtitle: "Articulate Rise eLearning, a foundation course on cloud analytics",
     type: "Course",
     description:
-      "Interactive Articulate Rise eLearning course covering the AWS analytics ecosystem, data lake architecture, and foundational services including S3, Glue, and Athena. Built for data practitioners and analytics engineers.",
+      "Interactive Articulate Rise course on a cloud analytics ecosystem and data lake architecture, including storage, catalog, and query services. Built for data practitioners.",
     context:
-      "AWS analytics services were growing rapidly, but customers lacked a foundational course that connected the services into a coherent learning journey for data practitioners and analytics engineers.",
+      "Cloud analytics services were growing quickly, and learners lacked a foundation course that connected them into one journey.",
     role: "Instructional Designer: designed curriculum architecture, built the full course in Articulate Rise, wrote content, and created assessment strategy.",
     challenge:
-      "Create a foundation-level Rise course that gives data practitioners a mental model of the entire AWS analytics ecosystem without overwhelming them with service-specific details.",
+      "Create a foundation Rise course that gives data practitioners a mental model of a cloud analytics ecosystem without burying them in service details.",
     approach:
-      "Built in Articulate Rise using a 'zoom in/zoom out' structure: start with the big picture data pipeline, then explore each stage with the relevant AWS service. Used consistent visual metaphors and interactive knowledge checks throughout.",
+      "Built in Articulate Rise with a zoom-in and zoom-out structure. Start with the data pipeline, then explore each stage with the relevant cloud service. Used consistent visuals and knowledge checks.",
     impact: [
       "Foundational analytics course in a technical learning catalog",
-      "Rise-built foundational analytics course in the AWS training catalog",
+      "Rise-built foundational analytics course in a technical learning catalog",
       "Data pipeline mental model reused across advanced analytics courses",
       "Directly relevant for data engineering teams evaluating analytics tooling",
       "Served as prerequisite for specialized analytics certifications",
@@ -177,11 +197,11 @@ export const projects: Project[] = [
   },
   {
     slug: "analytics-fundamentals-part-2",
-    title: "Fundamentals of Analytics on AWS: Part 2",
-    subtitle: "Articulate Rise eLearning — advanced analytics services and architectures",
+    title: "Fundamentals of Analytics: Part 2",
+    subtitle: "Articulate Rise eLearning on advanced analytics architectures",
     type: "Course",
     description:
-      "Continuation Articulate Rise eLearning course covering advanced analytics services including Redshift, EMR, Kinesis, and QuickSight, plus end-to-end architecture patterns for data engineering teams.",
+      "Continuation Articulate Rise course on advanced analytics, including warehouse, large-scale processing, streaming, and dashboard services, plus architecture patterns.",
     context:
       "Building on Part 1, this course bridges foundational knowledge to real-world analytics architectures used in production environments. Directly relevant for data engineering and analytics engineering teams.",
     role: "Instructional Designer: designed advanced content progression, built the course in Articulate Rise, and created architecture case studies with interactive assessments.",
@@ -192,7 +212,7 @@ export const projects: Project[] = [
     impact: [
       "Advanced analytics course completing a technical learning path",
       "Rise-built course completing the analytics fundamentals learning path",
-      "Reference architecture patterns adopted by AWS Solutions Architects for customer workshops",
+      "Reference architecture patterns used by solution architects in customer workshops",
       "Interactive architecture exercises validated real-world design skills",
       "Directly applicable for data engineering teams evaluating modern analytics stacks",
     ],
@@ -222,7 +242,7 @@ export const projects: Project[] = [
   {
     slug: "utilization-management-platform",
     title: "Utilization Management Case Review Platform",
-    subtitle: "Founder & AI Deployment Architect — autonomous agent system for Medicare payment review",
+    subtitle: "Founder and AI deployment architect for a Medicare payment review system",
     type: "Documentation",
     description:
       "Founder and AI deployment architect of a Medicare utilization management platform using autonomous Claude Code agents with a custom orchestrator to build 16 interdependent clinical workflow modules with human-in-the-loop review gates and explainability.",
@@ -246,72 +266,70 @@ export const projects: Project[] = [
     subtitle: "Full-stack multi-agent content platform built on Claude Sonnet 4.5",
     type: "Documentation",
     description:
-      "Full-stack, multi-role content operations platform using Claude Sonnet 4.5 as core generation infrastructure, paired with a multi-agent content orchestration engine that reduced manual content generation effort 90% and a Kiro-powered challenge builder agent that cut delivery time from days to hours.",
+      "Full-stack content platform using Claude Sonnet 4.5. A multi-agent engine cut manual content work 90 percent. A challenge builder cut delivery from days to hours.",
     context:
       "Technical content production at scale is bottlenecked by manual drafting, inconsistent quality gates, and version confusion across dozens of contributors. This system was built to remove that bottleneck without removing human judgment from the loop.",
-    role: "AI Systems Builder: architected and built the full-stack platform, the multi-agent orchestration engine, and the Kiro-powered challenge builder agent end to end.",
+    role: "AI systems builder: architected and built the full-stack platform, the multi-agent orchestration engine, and the challenge-builder agent end to end.",
     challenge:
       "Automate the bulk of technical content generation and quality assurance while preserving structural consistency, semantic versioning, and a clear human review checkpoint at every content state transition.",
     approach:
-      "Built a four-role operational workflow (React 18, Node.js/Express, Python, SQLite) with structural quality validation gates and automatic semantic versioning triggered on content state transitions. Separately built a multi-agent orchestration engine using prompt chaining and structured LLM output to automate production of technical workshop materials. Applied the same orchestration pattern to a Kiro-powered Jam Challenge Builder Agent that automates full challenge spec, design, and implementation.",
+      "Built a four-role workflow in React, Node.js, Python, and SQLite, with quality gates and semantic versioning on content state changes. A separate multi-agent engine uses prompt chaining to produce workshop materials. The same pattern powers a challenge-builder agent for spec, design, and implementation.",
     impact: [
       "Multi-agent content orchestration engine reduced manual content generation effort by 90%",
-      "Kiro Jam Challenge Builder Agent cut challenge delivery from 40-80 hours down to 4 hours",
+      "A challenge-builder agent cut delivery from 40 to 80 hours down to 4 hours",
       "Four-role workflow with structural quality gates and automatic semantic versioning on every content state transition",
       "Production system, not a prototype: built on Claude Sonnet 4.5 as core generation infrastructure",
     ],
   },
   {
-    slug: "servicenow-csm-certification",
-    title: "ServiceNow CSM Certification (Kingston, London, Madrid)",
-    subtitle: "Customer Service Management certification across three platform releases",
+    slug: "customer-service-certification",
+    title: "Customer Service Certification",
+    subtitle: "Customer service management certification across three platform releases",
     type: "Course",
     description:
-      "Developed the Customer Service Management (CSM) certification curriculum and psychometrics-based exams spanning the Kingston, London, and Madrid ServiceNow releases. Covered core CSM processes, case management, service channels, and customer workflows.",
+      "Developed a customer service management certification and psychometrics-based exams across three platform releases. Covered case management, service channels, and customer workflows.",
     context:
-      "ServiceNow's Customer Service Management module was evolving rapidly across platform releases. Each release introduced new features that certification candidates needed to master, requiring curriculum updates aligned to release cycles.",
+      "An enterprise software company's customer service product was changing quickly across releases. Each release added features certification candidates needed to master.",
     role: "Senior Technical Curriculum Developer: authored certification exam content using psychometrics methodology, designed learning materials, and coordinated with the global certification manager to align exam questions to competency frameworks.",
     challenge:
-      "Maintain certification rigor and relevance across three major platform releases (Kingston, London, Madrid) while ensuring exam questions accurately assessed real-world CSM implementation skills at each release level.",
+      "Keep the certification rigorous across three major releases, and make sure exam questions assessed real implementation skill at each release.",
     approach:
       "Developed performance-based exam questions aligned to competency frameworks for each release. Created accompanying training materials including flipped-classroom modules. Partnered with SMEs to validate technical accuracy against each release's feature set.",
     impact: [
-      "Certification exams adopted as the global standard for ServiceNow CSM credentials",
+      "Certification exams adopted as the global standard for that customer service credential",
       "Maintained exam validity and relevance across successive platform releases",
-      "Performance-based questions validated real-world implementation skills, not just recall",
+      "Performance-based questions validated real implementation skills, not just recall",
     ],
-    externalUrl: "https://learning.servicenow.com/lxp/en/pages/now-learning-get-certified?id=amap_detail&achievement_id=c162be7847f60a505cbdaf44846d43f5",
   },
   {
-    slug: "servicenow-fsm-certification",
-    title: "ServiceNow FSM Certification (New York, Orlando)",
-    subtitle: "Field Service Management certification across two platform releases",
+    slug: "field-service-certification",
+    title: "Field Service Certification",
+    subtitle: "Field service management certification across two platform releases",
     type: "Course",
     description:
-      "Developed the Field Service Management (FSM) implementation certification curriculum and exams for the New York and Orlando ServiceNow releases. Covered work order management, technician scheduling, resource allocation, and service delivery optimization.",
+      "Developed a field service implementation certification and exams across two platform releases. Covered work orders, technician scheduling, resources, and service delivery.",
     context:
-      "ServiceNow's Field Service Management module was growing as a key enterprise offering. Implementation consultants and administrators needed a validated credential to prove FSM deployment competency.",
-    role: "Senior Technical Curriculum Developer: designed certification curriculum, authored psychometrics-based exam questions, and built technical enablement for pre-sales teams on FSM new features and demos during release cycles.",
+      "Field service was growing as a key offering at an enterprise software company. Consultants needed a credential that proved they could deploy it.",
+    role: "Senior technical curriculum developer: designed the certification, wrote psychometrics-based exam questions, and built pre-sales enablement for new features and demos.",
     challenge:
-      "Create a certification that credibly validates FSM implementation skills across mobile workforce management, scheduling, and field operations while keeping pace with the New York and Orlando release cycles.",
+      "Create a certification that validates field service skills across mobile work, scheduling, and field operations, and keep it current across two release cycles.",
     approach:
-      "Mapped FSM competency domains to exam objectives for each release. Authored performance-based questions testing real implementation scenarios. Built pre-sales enablement materials equipping SEs with product knowledge and demo tools to accelerate sales cycles.",
+      "Mapped competency domains to exam objectives for each release. Wrote performance-based questions from real implementation scenarios. Built pre-sales materials with product knowledge and demo tools.",
     impact: [
-      "FSM certification adopted as the standard credential for implementation consultants",
-      "Pre-sales enablement equipped SEs with demo tools accelerating sales cycles",
+      "The certification became the standard credential for implementation consultants",
+      "Pre-sales enablement gave sellers demo tools that shortened sales cycles",
       "Kept certification content aligned with successive product releases",
     ],
-    externalUrl: "https://learning.servicenow.com/lxp/en/pages/now-learning-get-certified?id=amap_detail&achievement_id=5265835f1b63c514998555fa234bcbb4",
   },
   {
-    slug: "servicenow-cta-program",
-    title: "ServiceNow Certified Technical Architect Program",
-    subtitle: "Advanced certification program for ServiceNow platform architects",
+    slug: "technical-architect-certification",
+    title: "Technical Architect Certification",
+    subtitle: "Advanced certification for platform architects",
     type: "Training",
     description:
-      "Co-developed the Certified Technical Architect (CTA) program at ServiceNow, an advanced certification covering architecture design, integration, security, and governance through a flipped-classroom competency model.",
+      "Co-developed a flagship technical architect certification at an enterprise software company. It covers architecture, integration, security, and governance in a flipped classroom.",
     context:
-      "ServiceNow needed a rigorous, scalable certification program for its most advanced technical practitioners. The CTA credential validates expertise across architecture, integration, security, and governance on the ServiceNow platform.",
+      "The company needed a rigorous certification for its most advanced technical practitioners. The credential covers architecture, integration, security, and governance.",
     role: "Senior Technical Curriculum Developer: architected the flipped-classroom competency model, led cross-functional delivery, and developed psychometrics-based certification exams with the global certification manager.",
     challenge:
       "Design an advanced certification program that credibly validates architectural expertise while scaling delivery across global audiences.",
@@ -321,10 +339,9 @@ export const projects: Project[] = [
       "Won 2022 CEdMA Innovation Award for blended learning program design",
       "Delivered an advanced, learner-centered architecture certification program",
       "Re-platformed instructor-led learning into a self-paced experience",
-      "Psychometrics-based certification exams adopted as the standard for CSM and FSM credentials",
-      "Train-the-trainer programs scaled delivery capabilities across alliance partners globally",
+      "Psychometrics-based exams became the standard for the customer service and field service credentials",
+      "Train-the-trainer programs scaled delivery across alliance partners globally",
     ],
-    externalUrl: "https://learning.servicenow.com/expertprograms/en/pages/expert-program?id=snpx_home&type=CTA",
   },
 ];
 
