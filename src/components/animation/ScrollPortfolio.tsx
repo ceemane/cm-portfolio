@@ -5,6 +5,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Badge } from "@/components/ui/Badge";
 import { Card } from "@/components/ui/Card";
+import Link from "next/link";
 import { projects, type Project } from "@/lib/projects/data";
 
 // Lead with the recruiter-relevant proof: courses and learning experiences,
@@ -133,12 +134,37 @@ export function ScrollPortfolio() {
           </div>
         )}
 
+        <div
+          className="mb-4"
+          ref={(el) => {
+            cardsRef.current[featuredProjects.length] = el;
+          }}
+        >
+          <Link
+            href="/prd-generator"
+            className="group flex flex-col gap-4 rounded-2xl border border-border bg-card p-6 transition-all duration-400 hover:border-accent/30 hover:bg-card-hover hover:shadow-[0_0_40px_rgba(245,200,66,0.07)] sm:flex-row sm:items-center sm:justify-between"
+          >
+            <div>
+              <Badge variant="accent">Demo</Badge>
+              <h3 className="mt-4 text-base font-semibold leading-snug text-foreground transition-colors group-hover:text-accent">
+                PRD Generator
+              </h3>
+              <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted">
+                Type a feature idea and get a structured PRD in the browser. Nothing you type leaves this page.
+              </p>
+            </div>
+            <span className="inline-flex items-center gap-1 text-xs font-medium uppercase tracking-widest text-accent">
+              Try the demo <span aria-hidden="true">&rarr;</span>
+            </span>
+          </Link>
+        </div>
+
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {orderedProjects.map((project, i) => (
             <div
               key={project.slug}
               ref={(el) => {
-                cardsRef.current[featuredProjects.length + i] = el;
+                cardsRef.current[featuredProjects.length + 1 + i] = el;
               }}
             >
               <ProjectCard project={project} />
